@@ -1,0 +1,299 @@
+/* 
+What I have learned from making this webpage:
+- block divs naturally stack on top of each other, so you don't have to use flex (and then nest things you want inside of these divs)
+- html expects normal (not my body flex stuff) flow, so it makes space for things like containers (and this is what caused my gap at the top issue, the height for the sticky container should not have been set)
+- adding position: relative to things arbitrarrily allows for you to anchor elements. Meaning when I use position absolute -> it looks for the nearest positioned ancestors so if you don't use position relative on the parent class then this things' position will base itself off of the entire body
+- use transorm instead of top and etc. Makes it much less nuanced and less debugging required along the way
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* from what I learned I am able to not have to use flex and instead use divs */
+
+    flex-direction: column;
+}
+
+/*****************************************************************************************/
+/* navbar stuff */
+#navbar_full_container {
+    display: inline;
+
+    position: sticky;
+    height: 0;
+    /* ensures no space allocated outside!! */
+
+    width: 80vw;
+
+    top: 2%;
+    transform: translateX(18%);
+    /* fix for the sticky issue with it making an empty area at the top */
+
+    z-index: 2;
+}
+
+#navbar {
+    width: 50vw;
+    height: 10vh;
+
+    display: flex;
+    position: relative;
+
+    justify-content: center;
+
+    background-color: rgba(150, 150, 150, 0.65);
+    border: none;
+    border-radius: 100px;
+
+    z-index: 1;
+}
+
+#navbar:hover {
+    background-color: rgba(150, 150, 150, 0.75);
+}
+
+#dropdown_container {
+    position: absolute;
+    top: 13vh;
+    left: -14vw;
+    z-index: 5;
+
+    width: 80vw;
+    height: 13vh;
+
+    background-color: black;
+    display: none;
+}
+
+#dropdown_formatter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: yellow;
+
+    width: 80vw;
+    height: 13vh;
+}
+
+#dropdown_item_1 {
+    background-color: pink;
+    height: inherit;
+    width: 100%;
+}
+
+#dropdown_item_2 {
+    background-color: bisque;
+    height: inherit;
+    width: 100%;
+}
+
+#dropdown_item_3 {
+    background-color: white;
+    height: inherit;
+    width: 100%;
+}
+
+
+#dropdown_item_4 {
+    background-color: burlywood;
+    height: inherit;
+    width: 100%;
+}
+
+/*******************************************************************************************/
+/* title stuff */
+#title_section {
+    position: relative;
+
+    background-color: #9C7468;
+    width: 100vw;
+    height: 101vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scene_background {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+
+    border-radius: 50px;
+    position: absolute;
+    left: 5%;
+}
+
+#tank {
+    display: inline;
+
+    width: 30%;
+    height: 30%;
+    object-fit: contain;
+
+    position: absolute;
+    left: -6%;
+    top: -7%;
+    transform: rotateZ(-20deg);
+}
+
+#duck {
+    width: 55%;
+    height: 55%;
+    object-fit: contain;
+
+    position: absolute;
+    right: -10%;
+    bottom: -14.1%;
+
+    z-index: 3;
+    transform: rotateY(180deg);
+}
+
+#text-container {
+    width: 50%;
+    height: 30%;
+
+    z-index: 1;
+
+    position: absolute;
+    top: 29%;
+    left: 26%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: min(6vw, 90px);
+    text-align: center;
+    font-family: 'Rubik Bubbles', cursive;
+    color: #595959;
+}
+
+#subtitle-container {
+    width: 70%;
+    height: 10%;
+
+    z-index: 1;
+
+    position: absolute;
+    bottom: 30%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: max(2vw, 23px);
+    font-family: 'Sue Ellen Francisco', cursive;
+    color: #595959;
+}
+
+/*******************************************************************************************/
+#entrance {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #5E2A32;
+}
+
+#background_for_entrance {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+
+    border-radius: 50px;
+    position: absolute;
+    left: 5%;
+}
+
+#locked {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+
+    position: absolute;
+    transform: translateX(-7%);
+
+    z-index: 4;
+}
+
+#unlocked {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+
+    transform: translateX(-45%) translateY(-48%);
+
+    position: absolute;
+
+    z-index: 4;
+}
+
+#key {
+    width: 20%;
+    height: 20%;
+    object-fit: contain;
+
+    position: absolute;
+
+    right: 10%;
+    bottom: 10%;
+    /* no clue why it needs this outrageous value */
+    z-index: 5;
+}
+
+@keyframes dropdown_animation_in {
+    from {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes dropdown_animation_out {
+    from {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+}
+
+@keyframes duck_animation {
+    from {
+        transform: translateX(0%);
+        transform: rotateZ(180deg);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+/* @keyframes  */

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Intro.css">
+    <script src="Intro.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Sue+Ellen+Francisco&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="navbar_full_container">
+        <button id="navbar" onclick="dropdowner()"> </button>
+        <div id="dropdown_container">
+            <div id="dropdown_formatter">
+                <div id="dropdown_item_1"></div>
+                <div id="dropdown_item_2"></div>
+                <div id="dropdown_item_3"></div>
+                <div id="dropdown_item_4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="title_section">
+        <img class="scene_background" src="images/background.jpeg">
+        <img id="tank" src="images/tank.png">
+        <img id="duck" src="images/duck.png">
+
+        <div id="text-container">
+            <h1> WWII <br> Propaganda </h1>
+        </div>
+        <div id="subtitle-container">
+            <h2>Ryan Huang, Jayden An, Alice Aung, Kristina Lantushko, Ryan Bergman </h2>
+        </div>
+    </div>
+
+    <!-- <div id="login_space_occupier">
+        <div id="login_container">
+            <div id="login_title"> Login </div>
+            <input id="username_input" type="" placeholder="Username">
+            <input id="password_input" type="password" placeholder="Password">
+            <button id="login_button"> Submit </button>
+        </div>
+    </div> -->
+
+    <div id="entrance">
+        <img id="background_for_entrance" src="images/continueImage.jpg">
+
+        <img id="locked" src="images/locked.png" onclick="key_checker()">
+        <img id="key" src="images/key.webp" onclick="key_mover()">
+        <a href="../Posters/Posters.html"> <img id="unlocked" src="images/unlocked.png" style="display: none;"> </a>
+    </div>
+
+
+</body>
+
+</html>
