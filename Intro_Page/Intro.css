@@ -28,6 +28,10 @@ body {
     flex-direction: column;
 }
 
+html {
+    scrollbar-width: none;
+}
+
 /*****************************************************************************************/
 /* navbar stuff */
 #navbar_full_container {
@@ -182,7 +186,7 @@ body {
 
     font-size: min(6vw, 90px);
     text-align: center;
-    font-family: 'Rubik Bubbles', cursive;
+    font-family: "Rubik Bubbles", cursive;
     color: #595959;
 }
 

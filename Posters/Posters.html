@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="Posters.css">
+    <script src="Posters.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="navbar_full_container">
+        <button id="navbar" onclick="dropdowner()"> </button>
+        <div id="dropdown_container">
+            <div id="dropdown_formatter">
+                <div id="dropdown_item_1"></div>
+                <div id="dropdown_item_2"></div>
+                <div id="dropdown_item_3"></div>
+                <div id="dropdown_item_4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="title_section">
+        <img class="scene_background" src="images/background.jpeg">
+        <img id="tank" src="images/tank.png">
+        <img id="duck" src="images/duck.png">
+
+        <div id="text-container">
+            <h1> Posters! </h1>
+        </div>
+        <div id="subtitle-container">
+            <h2> The following slides were made by Ryan Huang </h2>
+        </div>
+    </div>
+
+    <div id="Slide_1">
+        <img class="big_scene_background" src="images/background.jpeg">
+        <div class="title_container">
+            Europe's Posters
+        </div>
+
+
+        <div class="image_tooltip_section">
+            <img class="poster_image" src="images/HintenDen.jpeg"> 
+            <div class="image_clicker">
+                <img class="arrow" src="images/arrow.png"  onclick="image_mover_left(0)">
+            </div>
+        </div>
+
+        <div class="info_box">
+            <div class="section_subtitle"> Hinter den Feindmächten: der Jude (1941) </div>
+            <div class="source"> <a class="source_link" href="https://germanhistorydocs.org/de/deutschland-nationalsozialismus-1933-1945/hinter-den-feindmaechten-der-jude-1941">
+                    Source Link
+                </a> </div>
+            <div class="description">
+                <div id="center_italicized"> <i> (Behind the enemy powers: the Jew) </i> </div>
+                <br>
+                This poster illustrates a Jewish person slyly watching from behind the flags of the Allied powers: the
+                United States, Great Britain, and the USSR. It aimed to spread the idea that Jewish people were working
+                with and controlling the “enemy powers”, calling to stop them before it was too late.
+            </div>
+        </div>
+
+        <div class="image_tooltip_section" id="image_2">
+            <img class="poster_image" src="images/dontdoitmother.png"> 
+            <div class="image_clicker" id="right_side_clicker">
+                <img class="arrow" src="images/arrow.png"  onclick="image_mover_right(1)">
+            </div>
+        </div>
+
+        <div id="second_info_box" class="info_box">
+            <div class="section_subtitle"> Don’t Do it Mother (1939-1945) </div>
+            <div class="source"> <a class="source_link" href=" https://www.iwm.org.uk/history/these-posters-helped-britain-prepare-for-air-raids-in-the-second-world-war">
+                   Source Link 
+                </a> </div>
+            <div class="description">
+                The ghost of Hitler is depicted as tempting a mother to take her children back to the city. 
+                The British government made these posters to convince families to move to the countryside and stay there,
+                out of fear of Germany’s air force raiding British major cities,
+                which revealed itself during the Battle of Britain.
+            </div>
+        </div>
+    </div>
+
+    <div id="Slide_2">
+        <img class="big_scene_background" src="images/background.jpeg">
+        <div class="title_container">
+            Americas's Posters
+        </div>
+
+
+        <div class="image_tooltip_section">
+            <img class="poster_image" src="images/japstelling.png"> 
+            <div class="image_clicker">
+                <img class="arrow" src="images/arrow.png"  onclick="image_mover_left(2)">
+            </div>
+        </div>
+
+        <div class="info_box">
+            <div class="section_subtitle"> How to Tell Japs from the Chinese, <i id="change_family_italicized"> Life Magazine</i> (1941) </div>
+            <div class="source"> <a class="source_link" href="https://cwp.missouri.edu/2012/wwii-propaganda-the-influence-of-racism">
+                    Source Link
+                </a> </div>
+            <div class="description">
+                To avoid mistaken attacks on Chinese immigrants by American citizens,
+                which at the time were America’s friends,
+                “informative” articles like these were published into newspapers across the country.
+                However, much of this information was incredibly misleading as they relied on stereotypes.
+                Simply put, America fought racism with racism.
+
+            </div>
+        </div>
+
+        <div class="image_tooltip_section" id="image_2">
+            <img class="poster_image" src="images/savefood.png"> 
+            <div class="image_clicker" id="right_side_clicker">
+                <img class="arrow" src="images/arrow.png"  onclick="image_mover_right(3)">
+            </div>
+        </div>
+
+        <div id="second_info_box" class="info_box">
+            <div class="section_subtitle"> Food is a weapon : don't waste it! : buy wisely, cook carefully, eat it all. (1943) </div>
+            <div class="source"> <a class="source_link" href="https://dc.library.northwestern.edu/items/6d64a150-f762-4886-aa10-cb3bf22048b5">
+                    Source Link
+                </a> </div>
+            <div class="description">
+                The phrase “Food is a weapon” showed how important it was for citizens
+                in the US to ration for the war effort in the Pacific: the extra food
+                saved was one of the only things keeping soldiers from victory--or defeat.
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+</body>
+
+</html>

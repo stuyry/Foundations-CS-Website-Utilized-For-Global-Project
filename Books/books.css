@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    z-index: 1;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+#intro, #overview, #title_1, #book_1, #book_2, #book_3, #book_4 {
+    position: relative; 
+    /* anchor!! */
+}
+
+#intro {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: red;
+}
+
+#overview {
+    width: 100vw;
+    height: 30vh;
+
+    background-color: blue;
+}
+
+#overview_wrapper {
+    width: 90vw;
+    height: 80%;
+
+    background-color: green;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#America {
+    width: 100vw;
+    height: 200vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    background-color: #91837e;
+}
+
+#title_1 {
+    width: 100vw;
+    height: 20vh;
+
+    background-color: yellow;
+}
+
+#image_wrapper {
+    height: 0vh;
+    width: 0vh;
+
+    position: relative;
+
+    /* no anchor indicates the image is technically bound to the body */
+}
+
+.background_image {
+    position: absolute;
+    top: -5vh;
+    left: -47.5vw;
+
+    width: 95vw;
+    height: 190vh;
+
+    object-fit: cover;
+
+    border-radius: 50px;
+}
+
+#book_1 {
+    width: 90vw;
+    height: 90vh;
+
+    background-color: green;
+}
+
+#book_1_title {
+}
+
+#book_2 {
+    width: 90vw;
+    height: 90vh;
+
+    background-color: red;
+}
+
+#book_3 {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: blue;
+}
+
+#book_4 {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: green;
+}
