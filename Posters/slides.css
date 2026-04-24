@@ -1,6 +1,6 @@
 #Slide_1 {
     width: 100vw;
-    height: 3200px;
+    height: 2000px;
 
     display: flex;
     justify-content: center;
@@ -136,7 +136,7 @@
 /* Slide 2 specifics */
 #Slide_2 {
     width: 100vw;
-    height: 3200px;
+    height: 2000px;
 
     display: flex;
     justify-content: center;

@@ -1,6 +1,6 @@
 #Europe {
     width: 100vw;
-    height: 2000px;
+    height: min(2000px, 180vw);
 
     display: flex;
     align-items: center;
@@ -11,11 +11,12 @@
     background-color: #91837e;
 }
 
-#book_1 {
+.book {
     width: 90%;
     height: 45%;
 }
-#book_1_wrapper {
+
+.book_wrapper {
     height: 60%;
     width: 70%;
 
@@ -34,12 +35,43 @@
     margin: none;
 }
 
-#book_1_title {
+.book_title {
 }
 
-#book_2 {
-    width: 90%;
-    height: 45%;
+.book_description {
 
-    background-color: red;
+}
+
+@keyframes multi_image_description_mover {
+    
+}
+
+@keyframes multi_image_description_mover_back {
+    
+}
+
+@keyframes single_image_description_mover {
+    
+}
+
+@keyframes single_image_description_mover_back {
+    
+}
+
+@keyframes borderFlashIn {
+    from {
+        border: dashed, 4px, #91837e;
+    }
+    to {
+        border: solid, 6px, yellow;
+    }
+}
+
+@keyframes borderFlashOut {
+    from {
+        border: solid, 6px, yellow;
+    }
+    to {
+        border: dashed, 4px, #91837e;
+    }
 }
