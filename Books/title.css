@@ -1,0 +1,50 @@
+.title_1 {
+    width: 100vw;
+    height: 20vh;
+
+    background-color: white;
+}
+
+.title_wrapper {
+    width: 5600px;
+    height: 100%;
+
+    overflow-x: hidden;
+    position: relative;
+
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+}
+
+.text {
+    width: 50%;
+    height: 100%;
+
+    text-align: center;
+
+    position: relative;
+    top: -5%;
+
+    font-family: 'Sekuya', sans-serif;
+    color: #4d3131;
+    font-size: 250px;
+    animation: text-mover 5.5s linear infinite;
+}
+
+#clone {
+    color: blue;
+}
+
+.american_title {
+    color: red;
+}
+
+@keyframes text-mover {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}

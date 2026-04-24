@@ -22,54 +22,7 @@ html {
     /* anchor!! */
 }
 
-#intro {
-    width: 100vw;
-    height: 100vh;
-
-    background-color: red;
-}
-
-#overview {
-    width: 100vw;
-    height: 30vh;
-
-    background-color: blue;
-}
-
-#overview_wrapper {
-    width: 90vw;
-    height: 80%;
-
-    background-color: green;
-    position: absolute;
-    top: 10%;
-    left: 5%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-#America {
-    width: 100vw;
-    height: 200vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex-direction: column;
-
-    background-color: #91837e;
-}
-
-#title_1 {
-    width: 100vw;
-    height: 20vh;
-
-    background-color: yellow;
-}
-
-#image_wrapper {
+.image_wrapper {
     height: 0vh;
     width: 0vh;
 
@@ -91,15 +44,6 @@ html {
     border-radius: 50px;
 }
 
-#book_1 {
-    width: 90vw;
-    height: 90vh;
-
-    background-color: green;
-}
-
-#book_1_title {
-}
 
 #book_2 {
     width: 90vw;
