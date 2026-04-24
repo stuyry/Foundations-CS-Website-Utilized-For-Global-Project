@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    z-index: 3;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* from what I learned I am able to not have to use flex and instead use divs */
+
+    flex-direction: column;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+.scene_background {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+
+    border-radius: 50px;
+    position: absolute;
+    left: 5%;
+}
+
+
+
+
+
+
+
+
+@keyframes duck_animation {
+    from {
+        transform: translateX(0%);
+        transform: rotateZ(180deg);
+    }
+
+    to {
+        transform: translateX(-200%);
+    }
+}
+

@@ -1,6 +1,6 @@
 #Europe {
     width: 100vw;
-    height: 200vh;
+    height: 2000px;
 
     display: flex;
     align-items: center;
@@ -12,8 +12,8 @@
 }
 
 #book_1 {
-    width: 90vw;
-    height: 90vh;
+    width: 90%;
+    height: 45%;
 }
 #book_1_wrapper {
     height: 60%;
@@ -21,7 +21,6 @@
 
     background-color: #e1d9ce;
     opacity: 68%;
-
 
     border: dashed, 4px, #91837e;
     border-radius: 30px;
@@ -33,4 +32,11 @@
 }
 
 #book_1_title {
+}
+
+#book_2 {
+    width: 90%;
+    height: 45%;
+
+    background-color: red;
 }

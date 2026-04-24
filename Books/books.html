@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="intro.css">
     <link rel="stylesheet" href="setup.css">
     <link rel="stylesheet" href="europe.css">
+    <link rel="stylesheet" href="america.css">
+    <link rel="stylesheet" href="navbar.css">
     <script src="books.js"></script>
 
     <link
@@ -16,30 +18,46 @@
 </head>
 
 <body>
+
+    <div id="navbar_full_container">
+        <button id="navbar" onclick="dropdowner()"> </button>
+        <div id="dropdown_container">
+            <div id="dropdown_formatter">
+                <div id="dropdown_item_1"></div>
+                <div id="dropdown_item_2"></div>
+                <div id="dropdown_item_3"></div>
+                <div id="dropdown_item_4"></div>
+            </div>
+        </div>
+    </div>
+
+    
     <div id="intro"></div>
 
 
 
     <div id="overview">
         <div id="overview_wrapper">
-            <div id="one">
-                <div id="one_title"> Der Giftpilz </div>
-                <img id="one_image">
-            </div>
+            <div id="overview_flex">
+                <div id="one">
+                    <div id="one_title"> Der Giftpilz </div>
+                    <img id="one_image">
+                </div>
 
-            <div id="one">
-                <div id="one_title"> Le Silence de la Mer </div>
-                <img id="one_image">
-            </div>
+                <div id="one">
+                    <div id="one_title"> Le Silence de la Mer </div>
+                    <img id="one_image">
+                </div>
 
-            <div id="one">
-                <div id="one_title"> A War-Time Handbook for Young Americans </div>
-                <img id="one_image">
-            </div>
+                <div id="one">
+                    <div id="one_title"> A War-Time Handbook for Young Americans </div>
+                    <img id="one_image">
+                </div>
 
-            <div id="one">
-                <div id="one_title"> The Moon Is Down </div>
-                <img id="one_image">
+                <div id="one">
+                    <div id="one_title"> The Moon Is Down </div>
+                    <img id="one_image">
+                </div>
             </div>
         </div>
     </div>

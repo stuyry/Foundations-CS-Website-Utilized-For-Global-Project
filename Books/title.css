@@ -1,8 +1,5 @@
-.title_1 {
-    width: 100vw;
-    height: 20vh;
-
-    background-color: white;
+.title {
+    height: 300px;
 }
 
 .title_wrapper {

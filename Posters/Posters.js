@@ -27,18 +27,18 @@ addEventListener("scroll", () => {
         }, 990);
     }
 
-    if (window.scrollY > 4100) {
+    if (window.scrollY > 2600) {
        imageClicked = true;
-       image_mover_left(0);
+       image_mover_left(0, 0);
        imageClickedRight = true;
-       image_mover_right(1);
+       image_mover_right(0, 1);
     }
 
-    if (window.scrollY < 4100) {
+    if (window.scrollY < 2600) {
         imageClicked = true;
-       image_mover_left(2);
+       image_mover_left(1, 2);
        imageClickedRight = true;
-       image_mover_right(3);
+       image_mover_right(1, 3);
     }
 
 });
@@ -62,46 +62,46 @@ function key_checker() {
 }
 
 //learned that when you use classNames you must specify the element you are using as an array index -> makes good sense to me
-function image_mover_left(index) {
+function image_mover_left(index, clickerIndex) {
     if (!imageClicked) {
         document.getElementsByClassName("image_tooltip_section")[index].style.animation = "see_image 1s ease-in-out";
-        document.getElementsByClassName("image_clicker")[index].style.animation = "rotate_arrow 1s ease-in-out";
+        document.getElementsByClassName("image_clicker")[clickerIndex].style.animation = "rotate_arrow 1s ease-in-out";
         imageClicked = true;
 
         setTimeout(() => {
             document.getElementsByClassName("image_tooltip_section")[index].style.left = "0px";
-            document.getElementsByClassName("image_clicker")[index].style.transform = "rotateZ(180deg)";
+            document.getElementsByClassName("image_clicker")[clickerIndex].style.transform = "rotateZ(180deg)";
         }, 990);
     }
     else {
         document.getElementsByClassName("image_tooltip_section")[index].style.animation = "see_image_out 1s ease-in-out";
-        document.getElementsByClassName("image_clicker")[index].style.animation = "rotate_arrow_back 1s ease-in-out";
+        document.getElementsByClassName("image_clicker")[clickerIndex].style.animation = "rotate_arrow_back 1s ease-in-out";
         imageClicked = false;
         setTimeout(() => {
-            document.getElementsByClassName("image_tooltip_section")[index].style.left = "-400px";
-            document.getElementsByClassName("image_clicker")[index].style.transform = "rotateZ(0deg)";
+            document.getElementsByClassName("image_tooltip_section")[index].style.left = "-345px";
+            document.getElementsByClassName("image_clicker")[clickerIndex].style.transform = "rotateZ(0deg)";
         }, 990);
     }
 }
 
-function image_mover_right(index) {
+function image_mover_right(index, clickerIndex) {
     if (!imageClickedRight) {
-        document.getElementsByClassName("image_tooltip_section")[index].style.animation = "see_image_right 1s ease-in-out";
-        document.getElementsByClassName("image_clicker")[index].style.animation = "rotate_arrow_back 1s ease-in-out";
+        document.getElementsByClassName("right_image_tooltip_section")[index].style.animation = "see_image_right 1s ease-in-out";
+        document.getElementsByClassName("image_clicker")[clickerIndex].style.animation = "rotate_arrow_back 1s ease-in-out";
         imageClickedRight = true;
 
         setTimeout(() => {
-            document.getElementsByClassName("image_tooltip_section")[index].style.left = "76%";
-            document.getElementsByClassName("image_clicker")[index].style.transform = "rotateZ(0deg)";
+            document.getElementsByClassName("right_image_tooltip_section")[index].style.right = "0px";
+            document.getElementsByClassName("image_clicker")[clickerIndex].style.transform = "rotateZ(0deg)";
         }, 990);
     }
     else {
-        document.getElementsByClassName("image_tooltip_section")[index].style.animation = "see_image_right_out 1s ease-in-out";
-        document.getElementsByClassName("image_clicker")[index].style.animation = "rotate_arrow 1s ease-in-out";
+        document.getElementsByClassName("right_image_tooltip_section")[index].style.animation = "see_image_right_out 1s ease-in-out";
+        document.getElementsByClassName("image_clicker")[clickerIndex].style.animation = "rotate_arrow 1s ease-in-out";
         imageClickedRight = false;
         setTimeout(() => {
-            document.getElementsByClassName("image_tooltip_section")[index].style.left = "100%";
-            document.getElementsByClassName("image_clicker")[index].style.transform = "rotateZ(180deg)";
+            document.getElementsByClassName("right_image_tooltip_section")[index].style.right = "-345px";
+            document.getElementsByClassName("image_clicker")[clickerIndex].style.transform = "rotateZ(180deg)";
         }, 990);
     }
 }

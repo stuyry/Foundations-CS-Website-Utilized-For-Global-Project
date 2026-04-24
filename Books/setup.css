@@ -45,23 +45,5 @@ html {
 }
 
 
-#book_2 {
-    width: 90vw;
-    height: 90vh;
 
-    background-color: red;
-}
 
-#book_3 {
-    width: 100vw;
-    height: 100vh;
-
-    background-color: blue;
-}
-
-#book_4 {
-    width: 100vw;
-    height: 100vh;
-
-    background-color: green;
-}
