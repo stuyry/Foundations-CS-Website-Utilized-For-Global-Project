@@ -25,6 +25,9 @@
     border: dashed, 4px, #91837e;
     border-radius: 30px;
 
+    position: relative;
+    top: 10%;
+    left: 15%;
     z-index: 0;
 
     padding: none;

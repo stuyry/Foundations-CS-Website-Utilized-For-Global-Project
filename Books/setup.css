@@ -17,6 +17,16 @@ html {
     scrollbar-width: none;
 }
 
+.scene_background {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+
+    border-radius: 50px;
+    position: absolute;
+    left: 5%;
+}
+
 #intro, #overview, #title_1, #book_1, #book_2, #book_3, #book_4 {
     position: relative; 
     /* anchor!! */
@@ -26,18 +36,12 @@ html {
     height: 0vh;
     width: 0vh;
 
-    position: relative;
-
     /* no anchor indicates the image is technically bound to the body */
 }
 
-.background_image {
-    position: absolute;
-    top: -5vh;
-    left: -47.5vw;
-
-    width: 95vw;
-    height: 190vh;
+#background_books {
+    width: 90vw;
+    height: 1870px;
 
     object-fit: cover;
 
