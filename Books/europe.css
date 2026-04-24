@@ -36,14 +36,21 @@
     padding: none;
     margin: none;
 
-    animation: multi_image_description_mover 1s ease-in-out;  
+    /* animation: multi_image_description_mover 1s ease-in-out; */
 }
 
 .book_title {
+    font-size: 3vw;
+    text-align: center;
+
+    font-family: 'Sue Ellen Francisco';
 }
 
 .book_description {
+    font-size: min(1.8vw, 23px);
+    margin-top: 2%;
 
+    font-family: 'Sue Ellen Francisco';
 }
 
 .multi_image_clicker {
@@ -102,23 +109,168 @@
 
     position: absolute;
     left: 0;
-    bottom: 0;  
+    bottom: 0;
 
     /* animation: button_swap 2s ease-in-out; */
 }
 
-@keyframes multi_image_description_mover {
+
+
+.flex_image_appear {
+    background-color: #91837e;
+    border-radius: 20px;
+    
+    width: min(70%, 700px);
+    height: 30%;
+
+    position: absolute;
+    top: 3%;
+    left: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    opacity: 0;
+
+    /* animation: multi_image_appear 2s ease-in-out; */
+}
+
+.multi_images {
+    height: 90%;
+    width: 30%;
+
+    border-radius: 20px;
+}
+
+.list {
+    width: 95%;
+    margin-left: 2.5%;
+    list-style-position: inside;
+}
+
+.single_book_wrapper {
+    width: 70%;
+    height: 60%;
+
+    top: 10%;
+    left: 15%;
+
+    /* animation: single_image_description_mover 1s ease-in-out; */
+}
+
+.single_image {
+    width: min(30%, 280px);
+    height: 50%;
+
+    border: #91837e solid 20px;
+    border-radius: 20px;;
+
+    position: absolute;
+    top: 15%;
+    right: 10%;
+
+    opacity: 0;
+
+    /* animation: single_image_appear 2s ease-in-out; */
+}
+
+@keyframes single_image_description_mover {
     from {
         width: 70%;
-        height: 65%;
+        height: 60%;
         top: 10%;
         left: 15%;
     }
     to {
+        width: 50%;
+        height: 70%;
+        top: 5%;
+        left: 3%;
+    }
+}
+
+@keyframes single_image_description_mover_back {
+    from {
+        width: 50%;
+        height: 70%;
+        top: 5%;
+        left: 3%;
+    }
+    to {
+        width: 70%;
+        height: 60%;
+        top: 10%;
+        left: 15%;
+    }
+}
+
+@keyframes single_image_appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes single_image_dissapear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes single_text_grower {
+    from {
+        font-size: min(1.8vw, 23px);
+    }
+    to {
+        font-size: min(2.3vw, 25px);
+    }
+}
+
+@keyframes single_title_grower {
+    from {
+        font-size: 3vw;
+    }
+    to {
+        font-size: 4vw;
+    }
+}
+
+@keyframes single_text_revert {
+    from {
+        font-size: min(2.3vw, 25px);
+    }
+    to {
+         font-size: min(1.8vw, 23px);
+    }
+}
+
+@keyframes single_title_revert {
+    from {
+        font-size: 4vw;
+    }
+    to {
+        font-size: 3vw;
+    }
+}
+@keyframes multi_image_description_mover {
+    from {
+        width: 70%;
+        height: 60%;
+        top: 10%;
+        left: 15%;
+    }
+
+    to {
         width: 90%;
         height: 32.5%;
         left: 5%;
-        top: 37.5% 
+        top: 37.5%
     }
 }
 
@@ -129,25 +281,68 @@
         left: 5%;
         top: 37.5%;
     }
+
     to {
         width: 70%;
-        height: 65%;
+        height: 60%;
         top: 10%;
         left: 15%;
     }
 }
 
+@keyframes multi_image_appear {
+    from {
+        opacity: 0;
+    }
 
-@keyframes multi_image_description_mover_back {
-    
+    to {
+        opacity: 1;
+    }
 }
 
-@keyframes single_image_description_mover {
-    
+@keyframes multi_image_disappear {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
-@keyframes single_image_description_mover_back {
-    
+@keyframes text_shrinker {
+    from {
+        font-size: min(1.8vw, 23px);
+    }
+    to {
+        font-size: min(1.3vw, 15px);
+    }
+}
+
+@keyframes text_revert {
+    from {
+        font-size: min(1.3vw, 15px);
+    }
+    to {
+        font-size: min(1.8vw, 23px);
+    }
+}
+
+@keyframes title_shrink {
+    from {
+        font-size: 3vw;
+    }
+    to {
+        font-size: 2vw;;
+    }
+}
+@keyframes title_revert {
+    from {
+        font-size: 2vw;
+    }
+    to {
+        font-size: 3vw;
+    }
 }
 
 @keyframes button_swap {
@@ -155,8 +350,9 @@
         transform: translateX(0%);
 
     }
+
     to {
-        transform: translateX(-50%);  
+        transform: translateX(-50%);
 
     }
 }
@@ -166,8 +362,9 @@
         transform: translateX(0%);
 
     }
+
     to {
-        transform: translateX(-50%);  
+        transform: translateX(50%);
 
     }
 }
@@ -176,6 +373,7 @@
     from {
         border: dashed, 4px, #91837e;
     }
+
     to {
         border: solid, 6px, yellow;
     }
@@ -185,6 +383,7 @@
     from {
         border: solid, 6px, yellow;
     }
+
     to {
         border: dashed, 4px, #91837e;
     }
