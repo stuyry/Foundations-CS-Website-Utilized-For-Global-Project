@@ -14,6 +14,8 @@
 .book {
     width: 90%;
     height: 45%;
+
+    position: relative;
 }
 
 .book_wrapper {
@@ -33,6 +35,8 @@
 
     padding: none;
     margin: none;
+
+    animation: multi_image_description_mover 1s ease-in-out;  
 }
 
 .book_title {
@@ -42,9 +46,97 @@
 
 }
 
-@keyframes multi_image_description_mover {
-    
+.multi_image_clicker {
+    width: 50%;
+    height: 100%;
+
+    min-height: 20%;
+
+    border: none;
+
+    background-color: #91837e;
+    color: white;
+    font-family: 'Sekuya';
+    font-size: min(8.9vw, 110px);
 }
+
+.multi_image_clicker:hover {
+    background-color: white;
+    color: #91837e;
+}
+
+.single_image_clicker {
+    width: 50%;
+    height: 100%;
+
+    border: none;
+
+    background-color: #91837e;
+    color: white;
+    font-family: 'Sekuya';
+    font-size: min(8.9vw, 110px);
+
+    display: block;
+}
+
+.single_image_clicker:hover {
+    background-color: white;
+    color: #91837e;
+}
+
+.clone_clicker {
+    /* padding-top: 0.35%; */
+    /* adjustment for a weird sizing issue that height couldn't solve */
+    /* RESOLVED!! -> added height to the parent which is the flex container */
+
+    left: 100%;
+}
+
+.flex_container_image_clicker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200%;
+    height: 20%;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;  
+
+    /* animation: button_swap 2s ease-in-out; */
+}
+
+@keyframes multi_image_description_mover {
+    from {
+        width: 70%;
+        height: 65%;
+        top: 10%;
+        left: 15%;
+    }
+    to {
+        width: 90%;
+        height: 32.5%;
+        left: 5%;
+        top: 37.5% 
+    }
+}
+
+@keyframes multi_image_description_mover_back {
+    from {
+        width: 90%;
+        height: 32.5%;
+        left: 5%;
+        top: 37.5%;
+    }
+    to {
+        width: 70%;
+        height: 65%;
+        top: 10%;
+        left: 15%;
+    }
+}
+
 
 @keyframes multi_image_description_mover_back {
     
@@ -56,6 +148,28 @@
 
 @keyframes single_image_description_mover_back {
     
+}
+
+@keyframes button_swap {
+    from {
+        transform: translateX(0%);
+
+    }
+    to {
+        transform: translateX(-50%);  
+
+    }
+}
+
+@keyframes button_swap_back {
+    from {
+        transform: translateX(0%);
+
+    }
+    to {
+        transform: translateX(-50%);  
+
+    }
 }
 
 @keyframes borderFlashIn {
