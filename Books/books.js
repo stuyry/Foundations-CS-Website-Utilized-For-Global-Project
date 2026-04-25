@@ -1,5 +1,5 @@
 let dropdown_active_signal = false;
-let europeHeight = 0;
+let sectionHeight = 0;
 let isLoaded = false;
 const flashIterations = 3;
 
@@ -27,15 +27,15 @@ addEventListener("DOMContentLoaded", () => {
 
     multiImageContainerCheck(0);
     singleImageContainerCheck(0, 1);
-    europeHeight = document.getElementById("Europe").getBoundingClientRect().height;
+    sectionHeight = document.getElementsByClassName("section")[0].getBoundingClientRect().height;
 
-    console.log(document.getElementsByClassName("book_wrapper")[1].getBoundingClientRect().width);
+    // console.log(document.getElementsByClassName("book_wrapper")[1].getBoundingClientRect().width);
     addEventListener("resize", () => {
 
-        console.log(document.getElementsByClassName("book_wrapper")[1].getBoundingClientRect().width);
+        // console.log(document.getElementsByClassName("book_wrapper")[1].getBoundingClientRect().width);
         singleImageContainerCheck(0, 1);
         multiImageContainerCheck(0);
-        europeHeight = document.getElementById("Europe").getBoundingClientRect().height;
+        sectionHeight = document.getElementsByClassName("section")[0].getBoundingClientRect().height;
     })
 });
 
@@ -76,7 +76,8 @@ function singleImageContainerCheck(singleImageIndex, bookIndex) {
 function scrollToBook(bookNumber) {
     switch (bookNumber) {
         case 0:
-            scrollTo(0, 1000 + (innerWidth * 0.3) + 300 + (europeHeight * 0.04));
+            scrollTo(0, 1000 + (innerWidth * 0.3) + 300 + (sectionHeight * 0.04));
+            //manual adjustment will be subtracted at the end
             break;
         case 1:
 
@@ -89,6 +90,7 @@ function scrollToBook(bookNumber) {
             break;
     }
 
+    //always should be 0!! -> it gets added to such so it amounts to the flash iterations or the amount of the times to make the border yello
     borderFlashing("book_wrapper", bookNumber, 0);
 }
 
@@ -119,17 +121,17 @@ function borderFlashing(className, index, count) {
     //for loop wasn't working so I made it recursive
 }
 
-function seeMultiImages(index) {
+function seeMultiImages(index, multImageContainerIndex) {
     transformed = true; 
 
-    document.getElementsByClassName("flex_container_image_clicker")[index].style.animation = "button_swap 1s ease-in-out";
+    document.getElementsByClassName("flex_container_for_image_clicker")[index].style.animation = "button_swap 1s ease-in-out";
     document.getElementsByClassName("book_wrapper")[index].style.animation = "multi_image_description_mover 1s ease-in-out";
 
     document.getElementsByClassName("book_description")[index].style.animation = "text_shrinker 1s ease-in-out";
     document.getElementsByClassName("book_title")[index].style.animation = "title_shrink 1s ease-in-out";
 
     setTimeout(() => {
-        document.getElementsByClassName("flex_container_image_clicker")[index].style.left = "-100%";
+        document.getElementsByClassName("flex_container_for_image_clicker")[index].style.left = "-100%";
 
         document.getElementsByClassName("book_wrapper")[index].style.width = "90%";
         document.getElementsByClassName("book_wrapper")[index].style.height = "32.5%";
@@ -140,24 +142,24 @@ function seeMultiImages(index) {
         document.getElementsByClassName("book_title")[index].style.fontSize = "2vw";
     }, 990)
 
-    document.getElementsByClassName("flex_image_appear")[index].style.animation = "multi_image_appear 2s ease-in-out";
+    document.getElementsByClassName("flex_image_appear")[multImageContainerIndex].style.animation = "multi_image_appear 2s ease-in-out";
 
     setTimeout(() => {
-        document.getElementsByClassName("flex_image_appear")[index].style.opacity = "1";
+        document.getElementsByClassName("flex_image_appear")[multImageContainerIndex].style.opacity = "1";
     }, 1980);
 }
 
 function seeSingleImages(genericIndex, singleIndex) {
     transformed = true; 
 
-    document.getElementsByClassName("flex_container_image_clicker")[genericIndex].style.animation = "button_swap 1s ease-in-out";
+    document.getElementsByClassName("flex_container_for_image_clicker")[genericIndex].style.animation = "button_swap 1s ease-in-out";
     document.getElementsByClassName("single_book_wrapper")[singleIndex].style.animation = "single_image_description_mover 1s ease-in-out";
 
     document.getElementsByClassName("book_description")[genericIndex].style.animation = "single_text_grower 1s ease-in-out";
     document.getElementsByClassName("book_title")[genericIndex].style.animation = "single_title_grower 1s ease-in-out";
 
     setTimeout(() => {
-        document.getElementsByClassName("flex_container_image_clicker")[genericIndex].style.left = "-100%";
+        document.getElementsByClassName("flex_container_for_image_clicker")[genericIndex].style.left = "-100%";
 
         document.getElementsByClassName("single_book_wrapper")[singleIndex].style.width = "50%";
         document.getElementsByClassName("single_book_wrapper")[singleIndex].style.height = "70%";
@@ -175,17 +177,17 @@ function seeSingleImages(genericIndex, singleIndex) {
     }, 1980);
 }
 
-function hideMultiImages(index) {
+function hideMultiImages(index, multImageContainerIndex) {
     transformed = false;
 
-    document.getElementsByClassName("flex_container_image_clicker")[index].style.animation = "button_swap_back 1s ease-in-out";
+    document.getElementsByClassName("flex_container_for_image_clicker")[index].style.animation = "button_swap_back 1s ease-in-out";
     document.getElementsByClassName("book_wrapper")[index].style.animation = "multi_image_description_mover_back 1s ease-in-out";
 
     document.getElementsByClassName("book_description")[index].style.animation = "single_text_revert 1s ease-in-out";
     document.getElementsByClassName("book_title")[index].style.animation = "single_title_revert 1s ease-in-out";
 
     setTimeout(() => {
-        document.getElementsByClassName("flex_container_image_clicker")[index].style.left = "0";
+        document.getElementsByClassName("flex_container_for_image_clicker")[index].style.left = "0";
 
         document.getElementsByClassName("book_wrapper")[index].style.width = "70%";
         document.getElementsByClassName("book_wrapper")[index].style.height = "60%";
@@ -196,24 +198,24 @@ function hideMultiImages(index) {
         document.getElementsByClassName("book_title")[index].style.fontSize = "3vw";
     }, 990)
 
-    document.getElementsByClassName("flex_image_appear")[index].style.animation = "multi_image_disappear 2s ease-in-out";
+    document.getElementsByClassName("flex_image_appear")[multImageContainerIndex].style.animation = "multi_image_disappear 2s ease-in-out";
 
     setTimeout(() => {
-        document.getElementsByClassName("flex_image_appear")[index].style.opacity = "0";
+        document.getElementsByClassName("flex_image_appear")[multImageContainerIndex].style.opacity = "0";
     }, 1980);
 }
 
 function hideSingleImages(genericIndex, singleIndex) {
     transformed = true; 
 
-    document.getElementsByClassName("flex_container_image_clicker")[genericIndex].style.animation = "button_swap_back 1s ease-in-out";
+    document.getElementsByClassName("flex_container_for_image_clicker")[genericIndex].style.animation = "button_swap_back 1s ease-in-out";
     document.getElementsByClassName("single_book_wrapper")[singleIndex].style.animation = "single_image_description_mover_back 1s ease-in-out";
 
     document.getElementsByClassName("book_description")[genericIndex].style.animation = "text_revert 1s ease-in-out";
     document.getElementsByClassName("book_title")[genericIndex].style.animation = "title_revert 1s ease-in-out";
 
     setTimeout(() => {
-        document.getElementsByClassName("flex_container_image_clicker")[genericIndex].style.left = "0";
+        document.getElementsByClassName("flex_container_for_image_clicker")[genericIndex].style.left = "0";
 
         document.getElementsByClassName("single_book_wrapper")[singleIndex].style.width = "70%";
         document.getElementsByClassName("single_book_wrapper")[singleIndex].style.height = "60%";

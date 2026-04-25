@@ -1,4 +1,4 @@
-#Europe {
+.section {
     width: 100vw;
     height: min(2000px, 180vw);
 
@@ -92,14 +92,10 @@
 }
 
 .clone_clicker {
-    /* padding-top: 0.35%; */
-    /* adjustment for a weird sizing issue that height couldn't solve */
-    /* RESOLVED!! -> added height to the parent which is the flex container */
-
     left: 100%;
 }
 
-.flex_container_image_clicker {
+.flex_container_for_image_clicker {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,10 +133,15 @@
 }
 
 .multi_images {
+    /* for each image */
     height: 90%;
     width: 30%;
 
     border-radius: 20px;
+}
+
+#testing {
+
 }
 
 .list {

@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="overview.css">
     <link rel="stylesheet" href="intro.css">
     <link rel="stylesheet" href="setup.css">
-    <link rel="stylesheet" href="europe.css">
-    <link rel="stylesheet" href="america.css">
+    <link rel="stylesheet" href="section.css">
+    <link rel="stylesheet" href="DEPRECATEDamerica.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="intro_section.css">
 
@@ -86,10 +86,11 @@
     </div>
 
 
-    <div id="Europe">
-        <div class="image_wrapper">
-            <img class="scene_background" id="background_books" src="images/background.jpeg"></img>
+    <div class="section">
+        <div class="background_wrapper">
+            <img class="scene_background background_books" src="images/background.jpeg"></img>
         </div>
+        
         <div class="book">
 
             <div class="flex_image_appear">
@@ -128,9 +129,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="flex_container_image_clicker">
-                <button class="multi_image_clicker" onclick="seeMultiImages(0)">See Images </button>
-                <button class="multi_image_clicker clone_clicker" onclick="hideMultiImages(0)"> Hide Images </button>
+            <div class="flex_container_for_image_clicker">
+                <button class="multi_image_clicker" onclick="seeMultiImages(0, 0)">See Images </button>
+                <button class="multi_image_clicker clone_clicker" onclick="hideMultiImages(0, 0)"> Hide Images </button>
             </div>
         </div>
 
@@ -164,7 +165,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="flex_container_image_clicker">
+
+            <div class="flex_container_for_image_clicker">
                 <button class="single_image_clicker" onclick ="seeSingleImages(1, 0)">See Image </button>
                 <button class="single_image_clicker clone_clicker" onclick ="hideSingleImages(1, 0)">Hide Image </button>
             </div>
@@ -182,12 +184,94 @@
         </div>
     </div>
 
+    <div class="section">
+        <div class="background_wrapper">
+            <img class="scene_background background_books" src="images/background.jpeg"></img>
+        </div>
+        
+        <div class="book">
 
+            <div class="flex_image_appear" id="testing">
+                <img class="multi_images" src="images/derGiftPageOne.png">
+                <img class="multi_images" src="images/derGift.png">
+                <img class="multi_images" src="images/derGiftPageTwo.png">
+            </div>
 
-    <div id="America">
-        <div id="book_3"></div>
-        <div id="book_4"></div>
+            <div class="book_wrapper">
+                <div class="book_title"> Der Giftpilz (The Poisonous Mushroom) (1938) </div>
+                <div class="book_description">
+                    <ul class="list">
+                        <li>This cartoony Nazi-era book depicts how,
+                            like how hard it is to differentiate between poisonous and edible mushrooms,
+                            it is also difficult to differentiate between a Jew and a Gentile (non-Jew).
+                            It was used to indoctrinate young children during the Third Reich.
+                        </li>
+                        
+
+                        <li>
+                            "Here, kids, I have some candy for you. But you both have to come with me..."
+                            This implies that there is a great risk of Jewish people kidnapping kids,
+                            using fear mongering to promote a harmful belief against Jewish people.
+                            Also note the illustrated stereotype of a Jew’s long crooked nose,
+                            which labels them as subhuman and untrustworthy.
+                        </li>
+                        
+                        <li>
+                            "The G-d of the Jews is money. To earn money,
+                            he commits the greatest crimes. He will not rest until he can sit on a huge money sack,
+                            until he has become the king of money.“
+                            This claims the principal value of Jews is wealth,
+                            painting them as greedy and willing to play dirty to
+                            fulfill any desires. They are painted as greedy and deceitful.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex_container_for_image_clicker">
+                <button class="multi_image_clicker" onclick="seeMultiImages(2, 1)">See Images </button>
+                <button class="multi_image_clicker clone_clicker" onclick="hideMultiImages(2, 1)"> Hide Images </button>
+            </div>
+        </div>
+
+        <div class="book">
+
+            <img class="single_image" src="images/SilencedeLaMer.png">
+
+            <div class="book_wrapper single_book_wrapper">
+                <div class="book_title"> Le Silence de la mer (Silence of the Sea) (1942) </div>
+                <div class="book_description"> 
+                    <ul class="list">
+                        <li>
+                            Published secretly in Paris during Germany’s annexation, 
+                            this novella narrates a story of an old man and his niece 
+                            showing resistance through silence to a German soldier, 
+                            himself also unaware of the true motives of the Nazi Party, 
+                            occupying their house in France during World War II. Vercor’s 
+                            book became a symbol of French resistance against Germany.
+                        </li>
+                        
+
+                        <li>
+                            “Je ne puis sans souffrir offenser un homme, fût-il mon ennemi.”
+                        </li>
+
+                        <li>
+                            (“I cannot offend a man, even if he is my enemy, without suffering.”)
+                        </li>
+                        
+                       
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex_container_for_image_clicker">
+                <button class="single_image_clicker" onclick ="seeSingleImages(3, 1)">See Image </button>
+                <button class="single_image_clicker clone_clicker" onclick ="hideSingleImages(3, 1)">Hide Image </button>
+            </div>
+        </div>
+
     </div>
+
 </body>
 
 </html>

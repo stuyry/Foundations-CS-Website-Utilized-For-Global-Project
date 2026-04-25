@@ -32,14 +32,14 @@ html {
     /* anchor!! */
 }
 
-.image_wrapper {
+.background_wrapper {
     height: 0vh;
     width: 0vh;
 
     /* no anchor indicates the image is technically bound to the body */
 }
 
-#background_books {
+.background_books {
     width: 90vw;
     height: min(1850px, 166vw);
 
