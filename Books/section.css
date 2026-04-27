@@ -70,7 +70,7 @@
     background-color: #91837e;
     color: white;
     font-family: 'Sekuya';
-    font-size: min(8.9vw, 360px);
+    font-size: min(8.9vw, 90px);
 }
 
 .multi_image_clicker:hover {
@@ -87,7 +87,7 @@
     background-color: #91837e;
     color: white;
     font-family: 'Sekuya';
-    font-size: min(8.9vw, 360px);
+    font-size: min(8.9vw, 90px);
 
     display: block;
 }
@@ -122,7 +122,7 @@
     background-color: #91837e;
     border-radius: 20px;
     
-    width: min(60%, 1400px);
+    width: min(60%, 500px);
     height: 30%;
 
     position: absolute;
@@ -162,10 +162,10 @@
 }
 
 .single_image {
-    width: min(30%, 725px);
+    width: min(30%, 230px);
     height: 50%;
 
-    border: #91837e solid 20px;
+    border: #91837e solid 10px;
     border-radius: 20px;;
 
     position: absolute;
