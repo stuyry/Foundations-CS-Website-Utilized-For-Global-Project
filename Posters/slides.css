@@ -1,6 +1,6 @@
 #Slide_1 {
     width: 100vw;
-    height: 2000px;
+    height: min(194.4vw, 200dvh);
 
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@
 
     font-family: "Rubik Bubbles", cursive;
     /* font-size: 5.3vw; */
-    font-size: max(7vw, 50px);
+    font-size: min(9vw, 40px);
     text-align: center;
     color: #595959;
 
@@ -83,12 +83,12 @@
     width: 70%;
     height: 10%;
 
-    position: absolute;
+    position: relative;
 
     left: 15%;
     top: 6%;
 
-    font-size: min(3vw, 55px);
+    font-size: min(3vw, 16px);
     font-family: 'Rubik Bubbles', cursive;
     text-align: center;
 }
@@ -97,12 +97,12 @@
     width: 90%;
     height: 60%;
 
-    position: absolute;
-    bottom: 9%;
+    position: relative;
+    top: 25%;
     left: 5%;
 
     font-family: 'Sue Ellen Francisco', cursive;
-    font-size: min(2.5vw, 40px);
+    font-size: min(2vw, 16px);
 }
 
  #center_italicized {
@@ -136,7 +136,7 @@
 /* Slide 2 specifics */
 #Slide_2 {
     width: 100vw;
-    height: 2000px;
+    height: min(194.4vw, 200dvh);
 
     display: flex;
     justify-content: center;

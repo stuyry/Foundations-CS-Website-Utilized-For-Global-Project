@@ -1,16 +1,14 @@
 .image_tooltip_section {
-    width: 345px;
+    width: min(40%, 120px);
     height: 23%;
     object-fit: contain;
 
+    top: 28%;
+
     position: absolute;
-    left: -343px;
-    top: 30%;
 
     display: flex;
     align-items: center;
-
-    border-radius: 20px;
 
     z-index: 2;
 
@@ -25,7 +23,7 @@
     right: -15%;
     top: 3%;
 
-    border-radius: inherit;
+    border-radius: 5px;
 
     z-index: 3;
 
@@ -40,7 +38,7 @@
     object-fit: contain;
     background-color: white;
 
-    border-radius: inherit;
+    border-radius: 5px;
 
     position: absolute;
     right: 9%;
@@ -48,27 +46,25 @@
 }
 
 .poster_image {
-    width: 100%;
+    width: 90%;
     height: 90%;
-    object-fit: contain;
+    
 
-    border-radius: 40px;
+    position: absolute;
+    left: 5%;
 }
 
 
 .right_image_tooltip_section {
-    width: 345px;
+    width: min(40%, 120px);
     height: 23%;
     object-fit: contain;
 
     position: absolute;
-    right: -345px;
-    top: 65%;
+    top: 63%;
 
     display: flex;
     align-items: center;
-
-    border-radius: 20px;
 
     z-index: 2;
 
@@ -82,25 +78,6 @@
     transform: rotateZ(180deg);
 }
 
-@keyframes see_image {
-    from {
-        transform: translateX(0px);
-    }
-
-    to {
-        transform: translateX(345px);
-    }
-}
-
-@keyframes see_image_out {
-    from {
-        transform: translateX(0px);
-    }
-
-    to {
-        transform: translateX(-345px);
-    }
-}
 
 @keyframes rotate_arrow {
     from {
@@ -119,25 +96,5 @@
 
     to {
         transform: rotateZ(360deg);
-    }
-}
-
-@keyframes see_image_right {
-    from {
-        transform: translateX(0px);
-    }
-
-    to {
-        transform: translateX(-345px);
-    }
-}
-
-@keyframes see_image_right_out {
-    from {
-        transform: translateX(0px);
-    }
-
-    to {
-        transform: translateX(345px);
     }
 }
