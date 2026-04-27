@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <link rel="stylesheet" href="films.css">
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="stylesheet" href="intro_section.css">
-        <script src="films.js"> </script>
-    </head>
-    <body>
-        <div id="navbar_full_container">
+<html>
+
+<head>
+    <link rel="stylesheet" href="animated_section_title.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="intro_section.css">
+    <link rel="stylesheet" href="section.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel&family=Rubik+Bubbles&family=Sekuya&family=Sue+Ellen+Francisco&display=swap"
+        rel="stylesheet">
+
+
+    <script src="films.js"> </script>
+</head>
+
+<body>
+    <div id="navbar_full_container">
         <button id="navbar" onclick="dropdowner()"> </button>
         <div id="dropdown_container">
             <div id="dropdown_formatter">
@@ -26,11 +36,128 @@
         <img id="duck" src="images/duck.png">
 
         <div id="text-container">
-            <h1> Books! </h1>
+            <h1> Films! </h1>
         </div>
         <div id="subtitle-container">
-            <h2> The following slides were ALSO made by Ryan Huang </h2>
+            <h2> The following slides were made by Kristina Lantushko </h2>
         </div>
     </div>
-    </body>
+
+
+    <div class="vertical_section_title">
+        <div class="section_title_text"> British Films </div>
+        <div class="section_title_text"> British Films </div>
+        <div class="section_title_text"> British Films </div>
+    </div>
+
+    <div class="section">
+        <!-- <div class="background_image"> -->
+        <img class="section_background" src="images/background.jpeg">
+        <!-- </div> -->
+        <div class="video">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bLgfSDtHFt8?rel=0">
+            </iframe>
+        </div>
+
+        <div class="analysis">
+            <div class="circle_description pos_left">
+                A short 1940’s British Documentary that uses realism & documentary footage
+                <div class="for_notes_text_wrapper">
+                    <div class="for_notes_text">
+                        For your notes!
+                    </div>
+                </div>
+            </div>
+            <div class="circle_description pos_middle">
+                Depicts civilians going about their normal lives during the day & witnessing destruction at night
+            </div>
+            <div class="circle_description pos_right">
+                Emphasizes resilience & determination; strong example of allied propaganda
+            </div>
+            <div class="circle_description pos_middle lower">
+                Highlights courage & unity of ordinary people which built strength + endurance
+            </div>
+            <div class="circle_description pos_left lowest">
+                <div class="long_inner_text">
+                    This film was distributed to the US to influence American public opinion
+                    and build support for Britain in WWII. It portrayed the British in such a raw,
+                    human way, that it gained much sympathy and eventual involvement from America
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="vertical_section_title">
+        <div class="section_title_text america_title_too_long"> American Films </div>
+        <div class="section_title_text america_title_too_long"> American Films </div>
+        <div class="section_title_text america_title_too_long"> American Films </div>
+    </div>
+
+    <div class="section" id="bigger_section">
+        <!-- <div class="background_image"> -->
+        <img class="section_background" src="images/background.jpeg">
+        <!-- </div> -->
+        <div class="video" id="video_2">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/I7vb89c6pQY?rel=0">
+            </iframe>
+
+        </div>
+
+        <div class="analysis">
+            <div class="circle_description pos_left" style=" height: min(19.5vw, 880px); width: min(30%, 1200px);">
+                <div class="long_inner_text" id="center_downwards">
+                    An animated short film by Walt Disney, and a
+                    Clear representation of WWII propaganda
+                    designed to influence public perception
+                </div>
+                <div class="for_notes_text_wrapper" id="second_text">
+                    <div class="for_notes_text">
+                        For your notes!
+                    </div>
+                </div>
+            </div>
+
+            <div class="circle_description pos_middle"
+                style="top: 17%; height: min(19.5vw, 880px); width: min(30%, 1200px);">
+                <div class="long_inner_text">
+                    Exhaggerates harshness & absurdity of life in Nazi Germany, using
+                    satire & humor makes message more accessive
+                    & memorable while still reinforicing fear of authoritarianism
+                </div>
+            </div>
+            <div class="circle_description pos_right"
+                style="top: 34%; height: min(19.5vw, 880px); width: min(30%, 1200px);">
+                Aims to boost American moral & patriotism -
+                encouraging viewers to appreciate life in America
+            </div>
+            <div class="circle_description pos_middle lower"
+                style="top: 51%; height: min(19.5vw, 880px); width: min(30%, 1200px);">
+                <div class="long_inner_text center_upwards">
+                    Donald Duck experiences a nightmare in which he is a citizen of Nazi Germany
+                    and is surrounded with never ending propaganda- swastikas appear everywhere, even in ordinary
+                    objects
+                </div>
+
+            </div>
+            <div class="circle_description pos_left lowest"
+                style="top: 68%; height: min(19.5vw, 880px); width: min(30%, 1200px);">
+                <div class="long_inner_text center_upwards">
+                    He is forced into exhausting manual labor in a weapons factory,
+                    while consistently saluting to Adolf Hitler.
+                    This oppressive environment ultimately sends Donald into a mental breakdown
+                </div>
+            </div>
+            <div class="circle_description pos_middle" id="even_lower_than_lowest"
+                style="top: 85%; height: min(19.5vw, 880px); width: min(30%, 1200px); ">
+                He wakes up relieved to discover that he is an American citizen, grateful for his freedom
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+
+    </div>
+
+</body>
+
 </html>

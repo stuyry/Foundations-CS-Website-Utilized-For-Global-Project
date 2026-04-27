@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    background-color: white;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+.scene_background {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+
+    border-radius: 50px;
+    position: absolute;
+    left: 5%;
+}
+
+.vertical_section_title {
+    height: min(20vw, 15vh);
+    width: 100vw;
+    overflow-y: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+
+.section_title_text {
+    font-size: min(10vw, 100px);
+    font-family: 'Sekuya';
+    transform: translateY(100%); 
+    animation: move_text 1.5s infinite linear;
+    line-height: 2.0;
+    /* align first text */
+}
+
+.america_title_too_long {
+    font-size: min(8vw, 100px);
+}
+
+@keyframes move_text {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+

@@ -72,7 +72,7 @@
     align-items: center;
     justify-content: center;
 
-    font-size: max(2vw, 23px);
+    font-size: min(2vw, 23px);
     font-family: 'Sue Ellen Francisco', cursive;
     color: #595959;
 }

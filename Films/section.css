@@ -1,0 +1,139 @@
+.section {
+    width: 100vw;
+    height: min(194.4vw, 200dvh); 
+    background-color: #91837e;
+
+    position: relative;
+}
+
+#bigger_section {
+    
+    height: min(190vw, 250dvh); 
+}
+
+.section_background {
+    width: 90%;
+    height: 93%;
+
+    object-fit: cover;
+
+    position: absolute;
+    
+    left: 3.5%;
+    top: 5%;
+
+    border-radius: 30px;
+
+    z-index: 0;
+}
+
+iframe {
+    outline: none;
+    border: none;
+}
+.video {
+    border: 12px #595959 solid;
+    width: min(55%, 450px);
+    height: 20%;
+
+    position: relative;
+
+    top: 9%;
+    left: 22.5%;
+
+    z-index: 1;
+}
+
+#video_2 {
+    /* has a different height so percent isnt accurate */
+    height: 17%;
+}
+
+.analysis {
+    /* width: min(80%, 2250px); */
+    width: 80%;
+    height: 55%;
+
+    position: relative;
+
+    top: 12%;
+    left: 10%;
+}
+
+.circle_description {
+    background-color: #9C7468;
+
+    /* width: min(33.3%, 800px); */
+    /* height: min(20vw, 600px); */
+
+    height: min(23vw, 300px);
+    width: min(33.3%, 350px);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    z-index: 1;
+
+    font-size: min(2vw, 26px);
+    text-align: center;
+    font-family: 'Cinzel';
+
+    border-radius: 40%;
+}
+
+.long_inner_text {
+    font-size: min(1.4vw, 18.5px);
+
+    position: relative;
+    top: 1%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* different dimensions is just to ensure the text doesnt escape */
+    height: 80%;
+    width: 80%;
+    border-radius: 40%;
+}
+
+#second_text {
+    left: 90%;
+}
+
+.for_notes_text_wrapper {
+    width: 0;
+    position: relative;
+    left: 60%;
+    top: -10%;
+
+    font-size: 3vw;
+}
+
+.for_notes_text {
+    width: 30vw;
+    height: 10vw;
+}
+
+.pos_middle {
+    left: 34%;
+    top: 20%;
+}
+
+.pos_right {
+    left: 68%;
+    top: 40%;
+}
+
+.lower {
+    top: 60%;
+}
+
+.lowest {
+    top: 80%;
+}
+
+
