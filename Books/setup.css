@@ -41,7 +41,7 @@ html {
 
 .background_books {
     width: 90vw;
-    height: min(1850px, 166vw);
+    height: min(185vh, 166vw);
 
     object-fit: cover;
 

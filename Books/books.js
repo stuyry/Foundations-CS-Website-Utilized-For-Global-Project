@@ -26,56 +26,61 @@ addEventListener("DOMContentLoaded", () => {
     isLoaded = true;
 
     multiImageContainerCheck(0);
-    singleImageContainerCheck(0, 1);
+    multiImageContainerCheck(1);
+    singleImageContainerCheck(0);
+    singleImageContainerCheck(1);
     sectionHeight = document.getElementsByClassName("section")[0].getBoundingClientRect().height;
 
     // console.log(document.getElementsByClassName("book_wrapper")[1].getBoundingClientRect().width);
     addEventListener("resize", () => {
 
         // console.log(document.getElementsByClassName("book_wrapper")[1].getBoundingClientRect().width);
-        singleImageContainerCheck(0, 1);
         multiImageContainerCheck(0);
+        multiImageContainerCheck(1);
+        singleImageContainerCheck(0);
+        singleImageContainerCheck(1);
         sectionHeight = document.getElementsByClassName("section")[0].getBoundingClientRect().height;
     })
 });
 
 function multiImageContainerCheck(index) {
-    if (innerWidth > 1113 && !transformed) {
-        const normalOffset = document.getElementsByClassName("book")[index].getBoundingClientRect().width * 0.15;
-        const missingOffset = (document.getElementsByClassName("book_wrapper")[index].getBoundingClientRect().width - 700) / 2;
-        const offsetToApply = normalOffset + missingOffset;
-        document.getElementsByClassName("flex_image_appear")[index].style.left = offsetToApply + "px";
-    }
-    else if (innerWidth > 1113 && transformed) {
-        const normalOffset = document.getElementsByClassName("book")[index].getBoundingClientRect().width * 0.15;
-        const missingOffset = ((document.getElementsByClassName("book_wrapper")[index].getBoundingClientRect().width * 7 / 9) - 700) / 2;
-        //accounts for extra width by converting the 90% width to what it would be at 70% (7 : 9 ratio)
-        const offsetToApply = normalOffset + missingOffset;
-        document.getElementsByClassName("flex_image_appear")[index].style.left = offsetToApply + "px";
-    }
-    else {
-        document.getElementsByClassName("flex_image_appear")[index].style.left = "15%";
-    }
+    // if (innerWidth > 1113 && !transformed) {
+    //     const normalOffset = document.getElementsByClassName("book")[index].getBoundingClientRect().width * 0.15;
+    //     const missingOffset = (document.getElementsByClassName("book_wrapper")[index].getBoundingClientRect().width - 700) / 2;
+    //     const offsetToApply = normalOffset + missingOffset;
+    //     document.getElementsByClassName("flex_image_appear")[index].style.left = offsetToApply + "px";
+    // }
+    // else if (innerWidth > 1113 && transformed) {
+    //     const normalOffset = document.getElementsByClassName("book")[index].getBoundingClientRect().width * 0.15;
+    //     const missingOffset = ((document.getElementsByClassName("book_wrapper")[index].getBoundingClientRect().width * 7 / 9) - 700) / 2;
+    //     //accounts for extra width by converting the 90% width to what it would be at 70% (7 : 9 ratio)
+    //     const offsetToApply = normalOffset + missingOffset;
+    //     document.getElementsByClassName("flex_image_appear")[index].style.left = offsetToApply + "px";
+    // }
+    // else {
+    //     document.getElementsByClassName("flex_image_appear")[index].style.left = "15%";
+    // }
+
+    let backgroundWidth = document.getElementsByClassName("section")[index].getBoundingClientRect().width;
+    let itemWidth = document.getElementsByClassName("flex_image_appear")[index].getBoundingClientRect().width;
+    let offsetToApply = (backgroundWidth - itemWidth) / 2.5;
+
+    
+    document.getElementsByClassName("flex_image_appear")[index].style.left = offsetToApply + "px";
 }
 
-function singleImageContainerCheck(singleImageIndex, bookIndex) {
-    if (innerWidth > 1113) {
-        const normalOffset = document.getElementsByClassName("book")[bookIndex].getBoundingClientRect().width * 0.1;
-        const missingOffset = ((document.getElementsByClassName("book_wrapper")[bookIndex].getBoundingClientRect().width - 500) * 10 / 40); 
-        //I calculated division by 14 to such so you convert the 7 : 10 -> the change in the book and then dvide by 2, but It appears I was wrong, probably forgot to account for  something.
-        //this is now just empirical division nothing really mathematical here
-        //500 represents the width when the vw starts to kick in if that makes sense - found empirically
-        const offsetToApply = normalOffset + missingOffset;
-        document.getElementsByClassName("single_image")[singleImageIndex].style.right = offsetToApply + "px";
-    }
-    else {
-        document.getElementsByClassName("single_image")[singleImageIndex].style.right = "10%";
-    }
+function singleImageContainerCheck(singleImageIndex) {
+    let backgroundWidth = document.getElementsByClassName("section")[singleImageIndex].getBoundingClientRect().width;
+    let itemWidth = document.getElementsByClassName("single_image")[singleImageIndex].getBoundingClientRect().width;
+    let offsetToApply = (backgroundWidth - itemWidth) / 1.35;
+
+    document.getElementsByClassName("single_image")[singleImageIndex].style.left = offsetToApply + "px";
 }
 
 function scrollToBook(bookNumber) {
     switch (bookNumber) {
         case 0:
+            //utilize getting the client rectangle and the height values each time instead of manual
             scrollTo(0, 1000 + (innerWidth * 0.3) + 300 + (sectionHeight * 0.04));
             //manual adjustment will be subtracted at the end
             break;
@@ -138,7 +143,7 @@ function seeMultiImages(index, multImageContainerIndex) {
         document.getElementsByClassName("book_wrapper")[index].style.top = "37.5%";
         document.getElementsByClassName("book_wrapper")[index].style.left = "5%";
 
-        document.getElementsByClassName("book_description")[index].style.fontSize = " min(1.3vw, 15px)";
+        document.getElementsByClassName("book_description")[index].style.fontSize = "min(1.3vw, 1.7vh)";
         document.getElementsByClassName("book_title")[index].style.fontSize = "2vw";
     }, 990)
 
@@ -166,8 +171,8 @@ function seeSingleImages(genericIndex, singleIndex) {
         document.getElementsByClassName("single_book_wrapper")[singleIndex].style.top = "5%";
         document.getElementsByClassName("single_book_wrapper")[singleIndex].style.left = "3%";
 
-        document.getElementsByClassName("book_description")[genericIndex].style.fontSize = "font-size: min(2.3vw, 25px);";
-        document.getElementsByClassName("book_title")[genericIndex].style.fontSize = "4vw";
+        document.getElementsByClassName("book_description")[genericIndex].style.fontSize = "min(2.1vw, 2.8vh)";
+        document.getElementsByClassName("book_title")[genericIndex].style.fontSize = "min(4vw, 80px)";
     }, 990)
 
     document.getElementsByClassName("single_image")[singleIndex].style.animation = "single_image_appear 2s ease-in-out";
@@ -194,7 +199,7 @@ function hideMultiImages(index, multImageContainerIndex) {
         document.getElementsByClassName("book_wrapper")[index].style.top = "10%";
         document.getElementsByClassName("book_wrapper")[index].style.left = "15%";
 
-        document.getElementsByClassName("book_description")[index].style.fontSize = "min(1.8vw, 23px)";
+        document.getElementsByClassName("book_description")[index].style.fontSize = "min(1.8vw, 2.4vh)";
         document.getElementsByClassName("book_title")[index].style.fontSize = "3vw";
     }, 990)
 
@@ -222,8 +227,8 @@ function hideSingleImages(genericIndex, singleIndex) {
         document.getElementsByClassName("single_book_wrapper")[singleIndex].style.top = "10%";
         document.getElementsByClassName("single_book_wrapper")[singleIndex].style.left = "15%";
 
-        document.getElementsByClassName("book_description")[genericIndex].style.fontSize = "min(1.8vw, 23px)";
-        document.getElementsByClassName("book_title")[genericIndex].style.fontSize = "3vw";
+        document.getElementsByClassName("book_description")[genericIndex].style.fontSize = "min(1.8vw, 2.4vh)";
+        document.getElementsByClassName("book_title")[genericIndex].style.fontSize = "min(3vw, 80px)";
     }, 990)
 
     document.getElementsByClassName("single_image")[singleIndex].style.animation = "single_image_dissapear 2s ease-in-out";

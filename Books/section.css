@@ -1,6 +1,6 @@
 .section {
     width: 100vw;
-    height: min(2000px, 180vw);
+    height: min(200vh, 180vw);
 
     display: flex;
     align-items: center;
@@ -46,8 +46,14 @@
     font-family: 'Sue Ellen Francisco';
 }
 
+#long_title {
+    font-size: min(3vw, 80px);
+    line-height: 1.0;
+    margin-top: 30px;
+}
+
 .book_description {
-    font-size: min(1.8vw, 23px);
+    font-size: min(1.8vw, 2.4vh);
     margin-top: 2%;
 
     font-family: 'Sue Ellen Francisco';
@@ -64,7 +70,7 @@
     background-color: #91837e;
     color: white;
     font-family: 'Sekuya';
-    font-size: min(8.9vw, 110px);
+    font-size: min(8.9vw, 360px);
 }
 
 .multi_image_clicker:hover {
@@ -81,7 +87,7 @@
     background-color: #91837e;
     color: white;
     font-family: 'Sekuya';
-    font-size: min(8.9vw, 110px);
+    font-size: min(8.9vw, 360px);
 
     display: block;
 }
@@ -116,12 +122,11 @@
     background-color: #91837e;
     border-radius: 20px;
     
-    width: min(70%, 700px);
+    width: min(60%, 1400px);
     height: 30%;
 
     position: absolute;
     top: 3%;
-    left: 15%;
 
     display: flex;
     align-items: center;
@@ -138,10 +143,6 @@
     width: 30%;
 
     border-radius: 20px;
-}
-
-#testing {
-
 }
 
 .list {
@@ -161,7 +162,7 @@
 }
 
 .single_image {
-    width: min(30%, 280px);
+    width: min(30%, 725px);
     height: 50%;
 
     border: #91837e solid 20px;
@@ -226,10 +227,10 @@
 
 @keyframes single_text_grower {
     from {
-        font-size: min(1.8vw, 23px);
+        font-size: min(1.8vw, 2.4vh);
     }
     to {
-        font-size: min(2.3vw, 25px);
+        font-size: min(2.1vw, 2.8vh);
     }
 }
 
@@ -238,22 +239,22 @@
         font-size: 3vw;
     }
     to {
-        font-size: 4vw;
+        font-size: min(4vw, 80px);
     }
 }
 
 @keyframes single_text_revert {
     from {
-        font-size: min(2.3vw, 25px);
+        font-size: min(2.1vw, 2.8vh);
     }
     to {
-         font-size: min(1.8vw, 23px);
+        font-size: min(1.8vw, 2.4vh);
     }
 }
 
 @keyframes single_title_revert {
     from {
-        font-size: 4vw;
+        font-size: min(4vw, 80px);
     }
     to {
         font-size: 3vw;
@@ -313,19 +314,19 @@
 
 @keyframes text_shrinker {
     from {
-        font-size: min(1.8vw, 23px);
+        font-size: min(1.8vw, 2.4vh);
     }
     to {
-        font-size: min(1.3vw, 15px);
+        font-size: min(1.3vw, 1.7vh);
     }
 }
 
 @keyframes text_revert {
     from {
-        font-size: min(1.3vw, 15px);
+        font-size: min(1.3vw, 1.7vh);
     }
     to {
-        font-size: min(1.8vw, 23px);
+        font-size: min(1.8vw, 2.4vh);
     }
 }
 
@@ -334,7 +335,7 @@
         font-size: 3vw;
     }
     to {
-        font-size: 2vw;;
+        font-size: 2vw;
     }
 }
 @keyframes title_revert {

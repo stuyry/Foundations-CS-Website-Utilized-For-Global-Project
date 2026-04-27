@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+html {
+    scrollbar-width: none;
+}
+
+.scene_background {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+
+    border-radius: 50px;
+    position: absolute;
+    left: 5%;
+}

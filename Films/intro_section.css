@@ -3,7 +3,9 @@
 
     background-color: #9C7468;
     width: 100vw;
-    height: min(97.2vw, 100dvh);
+    height: min(97.2vw, 100dvh); 
+    /* height: 100vh; */
+    /* covers entire height */
 
     display: flex;
     align-items: center;
