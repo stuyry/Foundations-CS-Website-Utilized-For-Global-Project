@@ -1,0 +1,72 @@
+#overview {
+    width: 100vw;
+    height: 30vw;
+
+    /* WHAT I LEARNED: USE REM. using vh really messes things up so using px or rem -> as I wanted it to be. IS WAY BETTER */
+
+    background-color: blue;
+
+    background-image: url("images/background.jpeg");
+    background-repeat: none;
+
+}
+
+#overview_flex {
+    width: 90vw;
+    height: 80%;
+
+    position: absolute;
+    top: 10%;
+    left: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
+}
+
+.overview_combo {
+    width: 22%;
+    height: 100%;
+
+    position: relative;
+
+    border: #ba8876 solid 10px;
+}
+
+.overview_book_caption {
+    position: absolute;
+
+    background-color: white;
+
+    font-family: 'Sue Ellen Francisco', cursive;
+
+    font-weight: 400;
+    font-size: 2vw;
+    /* clamp(12px, 2vw, 48px); */
+    /* ^^ fix for font escaping the container it is in (not using here because i am exploring scaling by width which might be the play)!! */
+    /* TODO: do for all other texts */
+
+    text-align: center;
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 20%;
+
+    bottom: 0;
+
+}
+
+#long_caption {
+    font-size: 1.44vw;
+}
+
+.overview_book_image {
+    background-color: pink;
+    width: 100%;
+    height: 80%;
+
+}

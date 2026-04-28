@@ -1,0 +1,72 @@
+body {
+    display: flex;;
+    justify-content: center;
+   
+
+    height: 100vh;
+    width: 100vw;
+
+    transform-origin: center center 1000px;
+}
+
+#red {
+    width: 40%;
+    height: 30%;
+
+    background-color: red;
+    position: absolute;
+
+    
+    transform: perspective(1000px) translateY(60%) rotateY(0deg);
+    transform-origin: center -200px -200px;
+
+    transform-style: preserve-3d;
+
+    z-index: 2;
+}
+
+#blue {
+    width: 40%;
+    height: 30%;
+
+    background-color: blue;
+    position: absolute;
+
+    top: 3%;
+    
+    /* transform: perspective(1000px) translateY(60%) rotateY(0);
+    transform-origin: center 60vw -40vw;
+
+    transform-style: preserve-3d; */
+
+    z-index: 1;
+}
+
+#green {
+    width: 40%;
+    height: 30%;
+
+    background-color: green;
+    position: absolute;
+
+    
+    transform: perspective(1000px) translateY(60%) rotateY(120deg);
+    transform-origin: center -200px -200px;
+
+    transform-style: preserve-3d;
+}
+
+#yellow {
+    width: 40%;
+    height: 30%;
+
+    background-color: yellow;
+
+    position: absolute;
+    
+    transform: perspective(1000px) translateY(60%) rotateY(240deg);
+    transform-origin: center -100px -200px;
+
+    transform-style: preserve-3d;
+}
+

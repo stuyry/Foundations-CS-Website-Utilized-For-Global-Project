@@ -1,5 +1,5 @@
 .image_tooltip_section {
-    width: min(40%, 120px);
+    width: min(35%, 200px);
     height: 23%;
     object-fit: contain;
 
@@ -20,7 +20,7 @@
     height: 12%;
 
     position: absolute;
-    right: -15%;
+    right: -18%;
     top: 3%;
 
     border-radius: 5px;
@@ -56,7 +56,7 @@
 
 
 .right_image_tooltip_section {
-    width: min(40%, 120px);
+    width: min(35%, 200px);
     height: 23%;
     object-fit: contain;
 
@@ -72,7 +72,7 @@
 }
 
 #right_side_clicker {
-    left: -15%;
+    left: -18%;
     top: 3%;
 
     transform: rotateZ(180deg);

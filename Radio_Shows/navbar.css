@@ -1,0 +1,110 @@
+#navbar_full_container {
+    position: sticky;
+    height: 0;
+    /* ensures no space allocated outside!! */
+
+    width: 80vw;
+
+    z-index: 100;
+
+    top: 2%;
+    transform: translateX(18%);
+    /* fix for the sticky issue with it making an empty area at the top */
+
+    z-index: 2;
+}
+
+#navbar {
+    width: 50vw;
+    height: 10vh;
+
+    display: flex;
+    position: relative;
+
+    left: 12%;
+    justify-content: center;
+
+    background-color: rgba(150, 150, 150, 0.65);
+    border: none;
+    border-radius: 100px;
+
+    z-index: 1;
+}
+
+#navbar:hover {
+    background-color: rgba(150, 150, 150, 0.75);
+}
+
+#dropdown_container {
+    position: absolute;
+    top: 13vh;
+    left: -5%;
+    z-index: 5;
+
+    width: 80vw;
+    height: 13vh;
+
+    background-color: black;
+    display: none;
+}
+
+#dropdown_formatter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: yellow;
+
+    width: 80vw;
+    height: 13vh;
+}
+
+#dropdown_item_1 {
+    background-color: pink;
+    height: inherit;
+    width: 100%;
+}
+
+#dropdown_item_2 {
+    background-color: bisque;
+    height: inherit;
+    width: 100%;
+}
+
+#dropdown_item_3 {
+    background-color: white;
+    height: inherit;
+    width: 100%;
+}
+
+
+#dropdown_item_4 {
+    background-color: burlywood;
+    height: inherit;
+    width: 100%;
+}
+
+@keyframes dropdown_animation_in {
+    from {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes dropdown_animation_out {
+    from {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+}

@@ -80,12 +80,12 @@
 }
 
 .section_subtitle {
-    width: 70%;
+    width: 90%;
     height: 10%;
 
     position: relative;
 
-    left: 15%;
+    left: 5%;
     top: 6%;
 
     font-size: min(3vw, 16px);
@@ -98,11 +98,11 @@
     height: 60%;
 
     position: relative;
-    top: 25%;
+    top: 15%;
     left: 5%;
 
     font-family: 'Sue Ellen Francisco', cursive;
-    font-size: min(2vw, 16px);
+    font-size: min(2vw, 25px);
 }
 
  #center_italicized {
@@ -149,4 +149,5 @@
 
 #change_family_italicized {
     font-family: 'Sue Ellen Francisco', cursive;
+    font-size: min(2vw, 7px);
 }
