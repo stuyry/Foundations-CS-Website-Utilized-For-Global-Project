@@ -1,0 +1,25 @@
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: min(35vh, 35vw);
+}
+
+#go_back {
+    text-decoration: none;
+    color: black;
+
+    width: min(40%, 350px);
+    height: 20%;
+
+    text-align: center;
+
+    font-family: "Sekuya";
+    font-size: min(6vw, 45px);
+
+    background-color: #9C7468;
+
+    border-radius: 10px;
+}

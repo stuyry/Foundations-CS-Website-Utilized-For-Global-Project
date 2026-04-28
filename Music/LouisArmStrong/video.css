@@ -1,0 +1,39 @@
+#video_section {
+    height: min(70vw, 70dvh);
+    width: 100vw;
+    
+    background-color: #9C7468;
+
+    position: relative;
+}
+
+iframe {
+    outline: none;
+    border: none;
+}
+.video {
+    border: 12px #595959 solid;
+    width: min(55%, 450px);
+    height: 50%;
+
+    position: relative;
+
+    top: 9%;
+    left: 22.5%;
+
+    z-index: 1;
+}
+
+#video_box {
+    top: 15%;
+    height: 30%;
+    width: 90%;
+}
+
+#video_background {
+    top: 3.5%;
+    width: 95%;
+    height: 95%;
+
+    left: 2.5%;
+}

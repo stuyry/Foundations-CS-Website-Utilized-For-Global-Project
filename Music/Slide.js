@@ -58,28 +58,28 @@ export class Slide {
                 if (this._rotation % 360 == 0) {
                     this._isFront = true;
                 }
-            }, 3900); //update this
+            }, 1940); //update this
         }
 
         else if (this._isFront) {
             //isFront becomes false, is Presented becomes true
-            this._element.style.animation = "put_new_main_slide 4s linear";
+            this._element.style.animation = "put_new_main_slide 2s linear";
             setTimeout(() => {
                 this.element.style.transformOrigin = "center 600% -150px";
                 this.element.style.zIndex = "1";
-            }, 3820);  
+            }, 1900);  
 
             this._isFront = false;
             this._isPresented = true;
         }
         else if (this._isPresented) {
             //becomes false for both presented and front after transition
-            this._element.style.animation = "main_slide_mover 4s linear";
+            this._element.style.animation = "main_slide_mover 2s linear";
 
             setTimeout(() => {
                 this.element.style.transformOrigin = "center -100px calc(max(-242px, -40vw))";
                 this.element.style.zIndex = "2";
-            }, 3820);
+            }, 1900);
 
             this._isPresented = false;
             this._isFront = false;
@@ -102,7 +102,7 @@ export class Slide {
                 if (this._rotation % 360 == 0) {
                     this._isFront = true;
                 }
-            }, 3900); //update this
+            }, 1940); //update this
         }
     }
     
