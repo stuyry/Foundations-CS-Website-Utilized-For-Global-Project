@@ -38,7 +38,7 @@ iframe {
 }
 
 #vertical_video {
-    transform: translateX(-35%);
+    transform: translateX(-75%);
     top: 25%;
 
     width: min(30%, 150px);

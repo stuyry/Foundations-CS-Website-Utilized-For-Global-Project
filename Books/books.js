@@ -238,115 +238,34 @@ function hideSingleImages(genericIndex, singleIndex) {
     }, 1980);
 }
 
+addEventListener("scroll", () => {
+    const navbarWidth = document.getElementById("navbar").getBoundingClientRect().width;
+    
+    const startPos = navbarWidth * 0.1;       
+    const endPos = navbarWidth * 0.9;          
+    const distance = endPos - startPos;
 
+    const totalHeight = document.getElementById("title_section").getBoundingClientRect().height + 
+    document.getElementById("overview").getBoundingClientRect().height + 
+    document.getElementsByClassName("title")[0].getBoundingClientRect().height +
+    document.getElementsByClassName("title")[1].getBoundingClientRect().height +
+    document.getElementsByClassName("section")[0].getBoundingClientRect().height +
+    document.getElementsByClassName("section")[1].getBoundingClientRect().height +
+    document.getElementById("footer").getBoundingClientRect().height;
 
-// @keyframes text_shrinker {
-//     from {
-//         font-size: min(2vw, 25px);
-//     }
-//     to {
-//         font-size: min(1.3vw, 15px);
-//     }
-// }
+    const progress = Math.min(scrollY / totalHeight, 1);
+    console.log(scrollY);
+    console.log(totalHeight);
 
-// @keyframes text_revert {
-//     from {
-//         font-size: min(1.3vw, 15px);
-//     }
-//     to {
-//         font-size: min(2vw, 25px);
-//     }
-// }
+    const application = startPos + (progress * distance);
+    document.getElementById("navbar_duck").style.left = `${application}px`;
+});
 
-// @keyframes title_shrink {
-//     from {
-//         font-size: 3vw;
-//     }
-//     to {
-//         font-size: 2vw;;
-//     }
-// }
-// @keyframes title_revert {
-//     from {
-//         font-size: 2vw;
-//     }
-//     to {
-//         font-size: 3vw;
-//     }
-// }
-// @keyframes multi_image_description_mover {
-//     from {
-//         width: 70%;
-//         height: 60%;
-//         top: 10%;
-//         left: 15%;
-//     }
-
-//     to {
-//         width: 90%;
-//         height: 32.5%;
-//         left: 5%;
-//         top: 37.5%
-//     }
-// }
-
-// @keyframes multi_image_description_mover_back {
-//     from {
-//         width: 90%;
-//         height: 32.5%;
-//         left: 5%;
-//         top: 37.5%;
-//     }
-
-//     to {
-//         width: 70%;
-//         height: 60%;
-//         top: 10%;
-//         left: 15%;
-//     }
-// }
-
-// @keyframes multi_image_appear {
-//     from {
-//         opacity: 0;
-//     }
-
-//     to {
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes multi_image_disappear {
-//     from {
-//         opacity: 1;
-//     }
-
-//     to {
-//         opacity: 0;
-//     }
-// }
-
-// @keyframes button_swap {
-//     from {
-//         transform: translateX(0%);
-
-//     }
-
-//     to {
-//         transform: translateX(-50%);
-
-//     }
-// }
-
-// @keyframes button_swap_back {
-//     from {
-//         transform: translateX(0%);
-
-//     }
-
-//     to {
-//         transform: translateX(-50%);
-
-//     }
-// }
+document.getElementById("dropdown_item_1").addEventListener("click", () => {
+    window.location.href = "../Posters/Posters.html"
+});
+// dropdown_item_2
+// dropdown_item_3
+// dropdown_item_4
+// dropdown_item_5
 

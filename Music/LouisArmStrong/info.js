@@ -37,3 +37,24 @@ function video_centerer() {
 
   //first try hell yeah -> I learned from my messy mistakes in books which i will change later :p
 }
+
+addEventListener("scroll", () => {
+    const navbarWidth = document.getElementById("navbar").getBoundingClientRect().width;
+    
+    const startPos = navbarWidth * 0.1;       
+    const endPos = navbarWidth * 0.9;          
+    const distance = endPos - startPos;
+
+    const totalHeight = document.getElementById("title_section").getBoundingClientRect().height + 
+    document.getElementById("introduction").getBoundingClientRect().height + 
+    document.getElementById("double_container").getBoundingClientRect().height +
+    document.getElementById("footer").getBoundingClientRect().height +
+    document.getElementById("video_section").getBoundingClientRect().height;
+
+    const progress = Math.min(scrollY / totalHeight, 1);
+    console.log(scrollY);
+    console.log(totalHeight);
+
+    const application = startPos + (progress * distance * 1.2);
+    document.getElementById("navbar_duck").style.left = `${application}px`;
+});

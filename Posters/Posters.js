@@ -274,6 +274,26 @@ function image_clicker_centerer() {
     
 }
 
+addEventListener("scroll", () => {
+    const navbarWidth = document.getElementById("navbar").getBoundingClientRect().width;
+    
+    const startPos = navbarWidth * 0.1;       
+    const endPos = navbarWidth * 0.9;          
+    const distance = endPos - startPos;
+
+    const totalHeight = document.getElementById("title_section").getBoundingClientRect().height + 
+    document.getElementById("Slide_1").getBoundingClientRect().height + 
+    document.getElementById("Slide_2").getBoundingClientRect().height + 
+    document.getElementById("footer").getBoundingClientRect().height;
+
+    const progress = Math.min(scrollY / totalHeight, 1);
+    console.log(scrollY);
+    console.log(innerHeight);
+
+    const application = startPos + (progress * distance);
+    document.getElementById("navbar_duck").style.left = `${application}px`;
+});
+
 // function transformRightClickerWidth(width) {
 //     return (innerWidth / 1.455) + width;
 // }

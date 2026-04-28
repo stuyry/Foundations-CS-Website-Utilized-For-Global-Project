@@ -24,6 +24,26 @@ addEventListener("scroll", () => {
   video_centerer();
 });
 
+addEventListener("scroll", () => {
+    const navbarWidth = document.getElementById("navbar").getBoundingClientRect().width;
+    
+    const startPos = navbarWidth * 0.1;       
+    const endPos = navbarWidth * 0.9;          
+    const distance = endPos - startPos;
+
+    const totalHeight = document.getElementById("title_section").getBoundingClientRect().height + 
+    document.getElementById("introduction").getBoundingClientRect().height + 
+    document.getElementsByClassName("video_section")[0].getBoundingClientRect().height +
+    document.getElementById("footer").getBoundingClientRect().height +
+    document.getElementById("smaller_video_section").getBoundingClientRect().height;
+
+    const progress = Math.min(scrollY / totalHeight, 1);
+    console.log(scrollY);
+    console.log(totalHeight);
+
+    const application = startPos + (progress * distance * 1.2);
+    document.getElementById("navbar_duck").style.left = `${application}px`;
+});
 function video_centerer() {
   const iterations = document.getElementsByClassName("video").length;
 

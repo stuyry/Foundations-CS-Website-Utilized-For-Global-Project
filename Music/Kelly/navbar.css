@@ -20,9 +20,8 @@
 
     display: flex;
     position: relative;
-
+    
     left: 12%;
-    justify-content: center;
 
     background-color: rgba(150, 150, 150, 0.65);
     border: none;
@@ -38,13 +37,20 @@
 #dropdown_container {
     position: absolute;
     top: 13vh;
-    left: -5%;
+    left: -17%;
     z-index: 3;
 
     width: 80vw;
     height: 13vh;
     display: none;
 
+}
+
+#navbar_duck {
+    position: relative;
+    left: 10%;
+
+    width: 35px;
 }
 
 #dropdown_formatter {
