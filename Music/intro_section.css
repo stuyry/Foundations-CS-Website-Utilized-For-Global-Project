@@ -1,0 +1,50 @@
+
+#text-container {
+    width: 50%;
+    height: 30%;
+
+    z-index: 1;
+
+    position: absolute;
+    top: 8%;
+    left: 26%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: min(6vw, 40px);
+    text-align: center;
+    font-family: "Rubik Bubbles", cursive;
+    color: #595959;
+}
+
+.scene_background {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+
+    border-radius: 50px;
+    position: absolute;
+    
+    left: 5%;
+}
+
+#subtitle-container {
+    width: 80%;
+    height: 10%;
+
+    z-index: 1;
+
+    position: absolute;
+    bottom: 5%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: min(1.6vw, 23px);
+    font-family: 'Sue Ellen Francisco', cursive;
+    color: #595959;
+}

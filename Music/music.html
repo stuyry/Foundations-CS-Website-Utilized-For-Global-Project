@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- dont mind the id names lol -->
         <link rel="stylesheet" href="music.css">
-        <script src="music.js"></script>
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="intro_section.css">
+        <script type="module" src="music.js"></script>
     </head>
 
     <body>
-        
-            <div id="red"> 
-                <img class = "" src = "">
+        <div id="navbar_full_container">
+        <button id="navbar" onclick="dropdowner()"> </button>
+        <div id="dropdown_container">
+            <div id="dropdown_formatter">
+                <div id="dropdown_item_1"></div>
+                <div id="dropdown_item_2"></div>
+                <div id="dropdown_item_3"></div>
+                <div id="dropdown_item_4"></div>
             </div>
-            <div id="blue"></div>
-            <div id="green"></div>
-            <div id="yellow"></div>
+        </div>
+    </div>
+
+   
+        <img class="scene_background" src="images/background.jpeg">
+        <img id="tank" src="images/tank.png">
+        <img id="duck" src="images/duck.png">
+
+        <div id="text-container">
+            <h1> Songs! </h1>
+        </div>
+        <div id="subtitle-container">
+            <h2> The following slides were made by Alice Aung and Jayden An  </h2>
+        </div>
+   
+
+
+        <div id="positional_container">
+            <div class="3d_logic" id="red"> 
+                <img class = "images" src = "./images/veraLynn.jpg">
+            </div>
+            <div class="3d_logic" id="green">
+                <img class = "images" src = "./images/graciefields.jpg">
+            </div>
+            <div class="3d_logic" id="yellow">
+                <img class = "images" src = "./images/runrabbit.jpg">
+            </div>
+            <div class="3d_logic" id="pink">
+                <img class = "images" src = "./images/andrewsisters.jpg">
+            </div>
+            <div class="3d_logic" id="purple">
+                <img class = "images" src = "./images/kelly.jpg">
+            </div>
+            <div class="3d_logic" id="neon">
+                <img class = "images" src = "./images/louisArmstrong.jpg">
+            </div>
+             <div class="3d_logic" id="blue">
+                <img class = "images" src = "./images/noelcowells.jpg">
+             </div>
+        </div>
         
     </body>
 </html>
