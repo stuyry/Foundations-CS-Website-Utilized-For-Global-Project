@@ -17,13 +17,12 @@ function onclicker() {
     purple.transitioner();
     neon.transitioner();
 
-    console.log(green._rotation);
-    console.log(yellow._rotation);
-    console.log(pink._rotation);
-    console.log(purple._rotation);
-    console.log(neon._rotation);
+    // console.log(green._rotation);
+    // console.log(yellow._rotation);
+    // console.log(pink._rotation);
+    // console.log(purple._rotation);
+    // console.log(neon._rotation);
 }
-
 function massPhaseFixer() {
     red.phaseFixer();
     blue.phaseFixer();
@@ -34,109 +33,75 @@ function massPhaseFixer() {
     neon.phaseFixer();
 }
 
-document.getElementById("blue").addEventListener("click", onclicker);
+//messy because i need to call the onclicker thingy to call transition but that complicates things as I would need to use
+//the java equivalent of ... and then do whole bunch of cleaning - it beats me
+red.element.addEventListener("click", () => {
+    if(red.isFront) {
+        onclicker();
+    }
+    else if (red.isPresented) {
+        window.location.href = "VeraLynn/info.html";
+    }
+});
+
+blue.element.addEventListener("click", () => {
+    if(blue.isFront) {
+        onclicker();
+    }
+    else if (blue.isPresented) {
+        window.location.href = "NoelCowards/info.html";
+    }
+});
+
+green.element.addEventListener("click", () => {
+    if(green.isFront) {
+        onclicker();
+    }
+    else if (green.isPresented) {
+        window.location.href = "LouisArmStrong/info.html";
+    }
+});
+
+yellow.element.addEventListener("click", () => {
+    if(yellow.isFront) {
+        onclicker();
+    }
+    else if (yellow.isPresented) {
+        window.location.href = "Kelly/info.html";
+    }
+});
+
+
+pink.element.addEventListener("click", () => {
+    if(pink.isFront) {
+        onclicker();
+    }
+    else if (pink.isPresented) {
+        window.location.href = "AndrewSisters/info.html";
+    }
+});
+
+purple.element.addEventListener("click", () => {
+    if(purple.isFront) {
+        onclicker();
+    }
+    else if (purple.isPresented) {
+        window.location.href = "Flanagan/info.html";
+    }
+});
+
+neon.element.addEventListener("click", () => {
+    if(neon.isFront) {
+        onclicker();
+    }
+    else if (neon.isPresented) {
+        window.location.href = "GracieFields/info.html";
+    }
+});
+
+
 setInterval(() => {
     massPhaseFixer();
-
-    if (blue.isFront) {
-        document.getElementById("blue").addEventListener("click", onclicker);
-    }
-    else {
-        document.getElementById("blue").removeEventListener("click", onclicker);
-    }
-    
-    if (red.isFront) {
-        document.getElementById("red").addEventListener("click", onclicker);
-    }
-     else {
-        document.getElementById("red").removeEventListener("click", onclicker);
-    }
-    
-    if (green.isFront) {
-        document.getElementById("green").addEventListener("click", onclicker);
-    }
-     else {
-        document.getElementById("green").removeEventListener("click", onclicker);
-    }
-    
-    if (yellow.isFront) {
-        document.getElementById("yellow").addEventListener("click", onclicker);
-    }
-     else {
-        document.getElementById("yellow").removeEventListener("click", onclicker);
-    }
-    
-    if (purple.isFront) {
-        document.getElementById("purple").addEventListener("click", onclicker);
-    }
-     else {
-        document.getElementById("purple").removeEventListener("click", onclicker);
-    }
-    
-    if (pink.isFront) {
-        document.getElementById("pink").addEventListener("click", onclicker);
-    }
-     else {
-        document.getElementById("pink").removeEventListener("click", onclicker);
-    }
-    
-    if (neon.isFront) {
-        document.getElementById("neon").addEventListener("click", onclicker);
-    }
-     else {
-        document.getElementById("neon").removeEventListener("click", onclicker);
-    }
-
-
-    //TODO:!!
-    // if (blue.isPresented) {
-    //     document.getElementById("blue").addEventListener("click", onclicker);
-    // }
-    // else {
-    //     document.getElementById("blue").removeEventListener("click", onclicker);
-    // }
-    
-    // if (red.isPresented) {
-    //     document.getElementById("red").addEventListener("click", onclicker);
-    // }
-    //  else {
-    //     document.getElementById("red").removeEventListener("click", onclicker);
-    // }
-    
-    // if (green.isPresented) {
-    //     document.getElementById("green").addEventListener("click", onclicker);
-    // }
-    //  else {
-    //     document.getElementById("green").removeEventListener("click", onclicker);
-    // }
-    
-    // if (yellow.isPresented) {
-    //     document.getElementById("yellow").addEventListener("click", onclicker);
-    // }
-    //  else {
-    //     document.getElementById("yellow").removeEventListener("click", onclicker);
-    // }
-    
-    // if (purple.isPresented) {
-    //     document.getElementById("purple").addEventListener("click", onclicker);
-    // }
-    //  else {
-    //     document.getElementById("purple").removeEventListener("click", onclicker);
-    // }
-    
-    // if (pink.isPresented) {
-    //     document.getElementById("pink").addEventListener("click", onclicker);
-    // }
-    //  else {
-    //     document.getElementById("pink").removeEventListener("click", onclicker);
-    // }
-    
-    // if (neon.isPresented) {
-    //     document.getElementById("neon").addEventListener("click", onclicker);
-    // }
-    //  else {
-    //     document.getElementById("neon").removeEventListener("click", onclicker);
-    // }
 }, 100);
 
 
