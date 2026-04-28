@@ -23,27 +23,14 @@
     left: 52%;
 }
 
-.listOfSongs {
-    width: 70%;
-    height: 10%;
-
-    display: block;
-
-    background-color: rgb(67, 52, 31);
-    border-radius: 10px;
-
-    margin-bottom: min(10%, 27px);
-
-    text-align: center;
-    color: white;
-}
 
 ul {
     position: relative;
-    left: 15%;
+    left: 5%;
 
     list-style-type: lower-roman;
-    line-height: min(400%, 59px);
+
+    font-size: min(1.3vw, 12px);
 }
 
 .listOfSongs:hover {
