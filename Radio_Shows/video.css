@@ -1,0 +1,61 @@
+.video_section {
+    height: min(100vw, 100dvh);
+    width: 100vw;
+    
+    background-color: #9C7468;
+
+    position: relative;
+}
+
+iframe {
+    outline: none;
+    border: none;
+}
+.video {
+    border: min(2vw, 8px) #595959 solid;
+    width: min(50%, 220px);
+    height: 35%;
+
+    position: relative;
+
+    top: 9%;
+    left: 22.5%;
+
+    z-index: 1;
+}
+
+.video_box {
+    top: 15%;
+    height: 45%;
+    width: 90%;
+}
+
+.video_background {
+    top: 3.5%;
+    width: 95%;
+    height: 95%;
+
+    left: 2.5%;
+}
+
+#vertical_video {
+    left: 10%;
+    top: 25%;
+
+    width: min(40%, 160px);
+    height: 55%;
+    position: absolute;
+}
+
+#vertical_box {
+    position: relative;
+    top: 10%;
+    left: 50%;
+
+    height: 80%;
+    width: 45%;
+}
+
+#smaller_video_section {
+    height: min(50vw, 50dvh);
+}

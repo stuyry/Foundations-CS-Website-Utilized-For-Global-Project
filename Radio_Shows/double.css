@@ -1,0 +1,39 @@
+#double_container {
+    background-color: #91837e;
+    width: 100vw;
+    height: min(80vw, 80dvh);
+
+    position: relative;
+}
+
+#divider1 {
+    position: absolute;
+    width: 45%;
+    height: 80%;
+    left: 4%;
+
+    z-index: 2;
+}
+
+#divider2 {
+    position: absolute;
+    width: 45%;
+    height: 80%;
+
+    left: 52%;
+}
+
+
+ul {
+    position: relative;
+    left: 5%;
+
+    list-style-type: lower-roman;
+
+    font-size: min(1.6vw, 22px);
+}
+
+.listOfSongs:hover {
+    background-color: white;
+    color: rgb(67, 52, 31);
+}

@@ -27,26 +27,6 @@ html {
     left: 5%;
 }
 
-#intro, #overview, #title_1, #book_1, #book_2, #book_3, #book_4 {
-    position: relative; 
-    /* anchor!! */
-}
-
-.background_wrapper {
-    height: 0vh;
-    width: 0vh;
-
-    /* no anchor indicates the image is technically bound to the body */
-}
-
-.background_books {
-    width: 90vw;
-    height: min(185vh, 166vw);
-
-    object-fit: cover;
-
-    border-radius: 50px;
-}
 
 
 

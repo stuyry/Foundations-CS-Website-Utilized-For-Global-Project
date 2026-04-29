@@ -1,6 +1,67 @@
-#intro {
+#introduction {
+    height: min(40vw, 40dvh);
     width: 100vw;
-    height: 1080px;
 
-    background-color: red;
+    position: relative;
+
+    background-color: #91837e;
+}
+
+.info_box {
+    position: relative;
+    height: 80%;
+    width: 90%;
+
+    background-color: #e1d9ce;
+    opacity: 68%;
+    left: 5%;
+    top: 10%;
+
+    border: dashed, 4px, #91837e;
+    border-radius: 30px;
+
+    z-index: 0;
+
+    padding: none;
+    margin: none;
+
+    z-index: 1;
+    /* makes everything go above background */
+}
+
+.section_subtitle {
+    width: 90%;
+    height: 10%;
+
+    position: relative;
+
+    left: 5%;
+    top: 6%;
+
+    font-size: min(3vw, 40px);
+    font-family: 'Rubik Bubbles', cursive;
+    text-align: center;
+
+}
+
+.description {
+    width: 90%;
+    height: 60%;
+
+    position: relative;
+    top: 15%;
+    left: 5%;
+
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: min(2vw, 25px);
+
+}
+
+#area_background {
+    width: 95%;
+    left: 2.5%;
+
+   top: 5%;
+
+    z-index: 1;
 }
