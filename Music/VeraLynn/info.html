@@ -1,9 +1,124 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-    </head>
-    <body>
-        <p> hey! </p>
-    </body>
+<head>
+    <link rel="stylesheet" href="intro_section.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="setup.css">
+    <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="double.css">
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Sekuya&family=Sue+Ellen+Francisco&display=swap"
+        rel="stylesheet">
+
+    <script src="info.js"> </script>
+</head>
+
+<body>
+    <div id="navbar_full_container">
+        <button id="navbar" onclick="dropdowner()">
+            <img id="navbar_duck" src="../images/navbardd-Photoroom.png">
+        </button>
+        <div id="dropdown_container">
+            <div id="dropdown_formatter">
+                <div id="dropdown_item_1" class="drop_item"> Posters </div>
+                <div id="dropdown_item_2" class="drop_item"> Books </div>
+                <div id="dropdown_item_3" class="drop_item"> Films </div>
+                <div id="dropdown_item_4" class="drop_item"> Music </div>
+                <div id="dropdown_item_5" class="drop_item"> Radio </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="title_section">
+        <img class="scene_background" src="../images/background.jpeg">
+        <!-- <img id="tank" src="../images/tank.png">
+        <img id="duck" src="../images/duck.png"> -->
+
+        <div id="text-container">
+            <h1> British Songs: Vera Lynn! </h1>
+        </div>
+
+        <div id="music_intro_image_container">
+            <img id="music_intro_image" src="../images/veraLynn.jpg">
+        </div>
+        <div id="subtitle-container">
+            <h2> The following slides were made by Alice Aung </h2>
+        </div>
+    </div>
+
+
+
+    <div class="video_section smaller_video_section">
+        <img class="scene_background video_background top" src="../images/background.jpeg">
+        <div class="video vertical_video" id="no_border">
+            <img src="../images/veraLynnExtra.png" class="slideshow_img">
+        </div>
+        <div class="info_box video_box vertical_box">
+            <div class="section_subtitle"> Vera Lynn </div>
+            <div class="description">
+                <ul>
+                    <li>Living from 1917-2020 (103 years old), she was an English singer who was nicknamed “the Forces’
+                        Sweetheart” due to her songs of love and longing resonating with the members of the military.
+
+                    </li>
+                    <li>Sang for people hiding in london tube stations during air raids.
+
+                    </li>
+                    <li>Had a weekly radio show called Sincerely Yours where she sang requested songs from British
+                        soldiers.
+
+                    </li>
+                    <li>Gave concerts to the British soldiers in India, Burma, and Egypt.
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="video_section smaller_video_section">
+        <img class="scene_background video_background bottom" id="second_background" src="../images/background.jpeg">
+        <div class="video vertical_video second_video">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/EGrES89AKz4?rel=0">
+            </iframe>
+        </div>
+        <div class="info_box video_box vertical_box second_box">
+            <div class="section_subtitle"> There’ll Always Be an England
+
+            </div>
+            <div class="description">
+                <ul>
+                    <li>
+                        It’s lyrics provided comfort to those that were separated from their loved ones. For example,
+                        “We'll meet again / Don't know where…Keep smiling through / Just like you always do”
+                    </li>
+                    <li>It was first recorded during the phoney war where there was still minimal fighting and mainly
+                        recruition.
+                    </li>
+                    <li>The performance was what got people. Low tone and emotional delivery.
+                    </li>
+                    <li>Received backlash as people assumed it was affecting the military’s morales which resulted in
+                        the multiple defeats in northern Africa.
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="footer">
+        <div id="container_link">
+            <a href="../music.html" id="go_back"> Go Back! </a>
+        </div>
+    </div>
+
+
+</body>
+
 </html>

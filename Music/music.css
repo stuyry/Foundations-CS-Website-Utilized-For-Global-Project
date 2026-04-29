@@ -38,8 +38,8 @@ html {
 }
 
 #red {
-    width: min(40%, 250px);
-    height: min(24%, 151px);
+    width: min(40%, 130px);
+    height: min(24%, 100px);
 
 
     background-color: #917e86;
@@ -57,8 +57,8 @@ html {
 }
 
 #blue {
-    width: min(40%, 250px);
-    height: min(24%, 151px);
+    width: min(40%, 130px);
+    height: min(24%, 100px);
 
     background-color: #565656;
     border-radius: 20px;
@@ -77,8 +77,8 @@ html {
 }
 
 #green {
-    width: min(40%, 250px);
-    height: min(24%, 151px);
+    width: min(40%, 130px);
+    height: min(24%, 100px);
 
     background-color: #9C7468;
     border-radius: 20px;
@@ -94,8 +94,8 @@ html {
 }
 
 #yellow {
-    width: min(40%, 250px);
-    height: min(24%, 151px);
+    width: min(40%, 130px);
+    height: min(24%, 100px);
 
     background-color: #565656;
     border-radius: 20px;
@@ -109,8 +109,8 @@ html {
 }
 
 #pink {
-    width: min(40%, 250px);
-    height: min(24%, 151px);
+    width: min(40%, 130px);
+    height: min(24%, 100px);
 
     background-color: #917e86;
     border-radius: 20px;
@@ -124,8 +124,8 @@ html {
 }
 
 #purple {
-    width: min(40%, 250px);
-    height: min(24%, 151px);
+    width: min(40%, 130px);
+    height: min(24%, 100px);
 
     background-color: #9C7468;
     border-radius: 20px;
@@ -139,8 +139,8 @@ html {
 }
 
 #neon {
-    width: min(40%, 250px);
-    height: min(24%, 151px);
+    width: min(40%, 130px);
+    height: min(24%, 100px);
 
     background-color: #565656;
     border-radius: 20px;

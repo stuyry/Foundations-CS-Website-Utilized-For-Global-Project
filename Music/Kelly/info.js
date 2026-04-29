@@ -34,7 +34,7 @@ addEventListener("scroll", () => {
     const navbarWidth = document.getElementById("navbar").getBoundingClientRect().width;
     
     const startPos = navbarWidth * 0.1;       
-    const endPos = navbarWidth * 0.9;          
+    const endPos = navbarWidth * 0.8;          
     const distance = endPos - startPos;
 
     const totalHeight = document.getElementById("title_section").getBoundingClientRect().height + 
@@ -65,6 +65,20 @@ function video_centerer() {
     //first try hell yeah -> I learned from my messy mistakes in books which i will change later :p
 }
 
-setInterval(() => {
-
-}, 100)
+setInterval(() => { //nested in here because the display is none
+    document.getElementById("dropdown_item_1").addEventListener("click", () => {
+        window.location.href = "../../Posters/Posters.html";
+    });
+    document.getElementById("dropdown_item_2").addEventListener("click", () => {
+        window.location.href = "../../Books/books.html";
+    });
+    document.getElementById("dropdown_item_3").addEventListener("click", () => {
+        window.location.href = "../../Films/films.html";
+    });
+    document.getElementById("dropdown_item_4").addEventListener("click", () => {
+        window.location.href = "../../Music/music.html";
+    });
+    document.getElementById("dropdown_item_5").addEventListener("click", () => {
+        window.location.href = "../../Radio_Shows/radio.html";
+    });
+}, 100);

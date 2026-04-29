@@ -126,4 +126,22 @@ function dropdowner() {
 
 document.getElementById("navbar").addEventListener("click", dropdowner);
 
+setInterval(() => { //nested in here because the display is none
+    document.getElementById("dropdown_item_1").addEventListener("click", () => {
+        window.location.href = "../Posters/Posters.html";
+    });
+    document.getElementById("dropdown_item_2").addEventListener("click", () => {
+        window.location.href = "../Books/books.html";
+    });
+    document.getElementById("dropdown_item_3").addEventListener("click", () => {
+        window.location.href = "../Films/films.html";
+    });
+    document.getElementById("dropdown_item_4").addEventListener("click", () => {
+        window.location.href = "../Music/music.html";
+    });
+    document.getElementById("dropdown_item_5").addEventListener("click", () => {
+        window.location.href = "../Radio_Shows/radio.html";
+    });
+}, 100);
+
 

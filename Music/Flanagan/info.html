@@ -1,9 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-    </head>
-    <body>
-        <p> hey! </p>
-    </body>
+<head>
+    <link rel="stylesheet" href="intro_section.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="setup.css">
+    <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="double.css">
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Sekuya&family=Sue+Ellen+Francisco&display=swap"
+        rel="stylesheet">
+
+    <script src="info.js"> </script>
+</head>
+
+<body>
+    <div id="navbar_full_container">
+        <button id="navbar" onclick="dropdowner()">
+            <img id="navbar_duck" src="../images/navbardd-Photoroom.png">
+        </button>
+        <div id="dropdown_container">
+            <div id="dropdown_formatter">
+                <div id="dropdown_item_1" class="drop_item"> Posters </div>
+                <div id="dropdown_item_2" class="drop_item"> Books </div>
+                <div id="dropdown_item_3" class="drop_item"> Films </div>
+                <div id="dropdown_item_4" class="drop_item"> Music </div>
+                <div id="dropdown_item_5" class="drop_item"> Radio </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="title_section">
+        <img class="scene_background" src="../images/background.jpeg">
+        <!-- <img id="tank" src="../images/tank.png">
+        <img id="duck" src="../images/duck.png"> -->
+
+        <div id="text-container">
+            <h1> British Songs: Flanagan and Allen! </h1>
+        </div>
+
+        <div id="music_intro_image_container">
+            <img id="music_intro_image" src="../images/runrabbit.jpg">
+        </div>
+        <div id="subtitle-container">
+            <h2> The following slides were made by Alice Aung </h2>
+        </div>
+    </div>
+
+
+
+    <div class="video_section smaller_video_section">
+        <img class="scene_background video_background top" src="../images/background.jpeg">
+        <div class="video vertical_video">
+            <img src="../images/crater.png" class="slideshow_img">
+        </div>
+        <div class="info_box video_box vertical_box">
+            <div class="section_subtitle"> Flanagan and Allen </div>
+            <div class="description">
+                <ul>
+                    <li>Comedic singing duo against Germany. </li>
+                    <li>Many of their songs poked at Hitler and German troops and were sing-alongs.
+                        Some were romantic to comfort the ones who were in absence of a loved one
+                        due to their departure for the military.</li>
+                    <li>They both met in World War I while fighting in the British troops
+                        but didn’t start working together until six years after the war ended.</li>
+                    <li>Fun Fact : Flanagan ran away to sea at the age of 14!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="video_section smaller_video_section">
+        <img class="scene_background video_background bottom" id="second_background" src="../images/background.jpeg">
+        <div class="video vertical_video second_video">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SXmk8dbFv_o?rel=0">
+            </iframe>
+        </div>
+        <div class="info_box video_box vertical_box second_box">
+            <div class="section_subtitle"> Run Rabbit Run </div>
+            <div class="description">
+                <ul>
+                    <li>
+                        The original lyrics were about a farmer shooting rabbits to make pie but then it was changed to
+                        mock Hitler and then revamped to “Run Adolf Run!”
+                    </li>
+                    <li>Germans sent bombs that were targeted towards British ships but instead it created a massive
+                        crater which allegedly killed two bunnies. After this, the lyrics were taken into interpretation
+                        and was used as a mockery of German’s clumsiness.
+                    </li>
+                    <li>Became a rallying call
+                    </li>
+                    <li>Used strange and funny language like the repetition of run rabbit run.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="footer">
+        <div id="container_link">
+            <a href="../music.html" id="go_back"> Go Back! </a>
+        </div>
+    </div>
+
+
+</body>
+
 </html>

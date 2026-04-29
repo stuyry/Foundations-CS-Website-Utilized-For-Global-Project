@@ -2,15 +2,16 @@
     width: 100vw;
     height: min(194.4vw, 200dvh); 
 
-    min-height: 194.4vw;
+    min-height: min(194vw, 200vh);
     background-color: #91837e;
 
     position: relative;
 }
 
 #bigger_section {
-    height: min(190vw, 230dvh); 
-    min-height: 200vw;
+    height: min(194vw, 230dvh); 
+    min-height: min(170vw, 230vh);
+    /* use java script to put the min height 170vw when the websites shrinks beyond a certain point */
 }
 
 .section_background {

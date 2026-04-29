@@ -13,7 +13,7 @@ iframe {
 }
 .video {
     border: 12px #595959 solid;
-    width: min(55%, 450px);
+    width: min(55%, 200px);
     height: 50%;
 
     position: relative;

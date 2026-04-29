@@ -1,9 +1,115 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-    </head>
-    <body>
-        <p> hey! </p>
-    </body>
+<head>
+    <link rel="stylesheet" href="intro_section.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="setup.css">
+    <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="double.css">
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Sekuya&family=Sue+Ellen+Francisco&display=swap"
+        rel="stylesheet">
+
+    <script src="info.js"> </script>
+</head>
+
+<body>
+    <div id="navbar_full_container">
+        <button id="navbar" onclick="dropdowner()">
+            <img id="navbar_duck" src="../images/navbardd-Photoroom.png">
+        </button>
+        <div id="dropdown_container">
+            <div id="dropdown_formatter">
+                <div id="dropdown_item_1" class="drop_item"> Posters </div>
+                <div id="dropdown_item_2" class="drop_item"> Books </div>
+                <div id="dropdown_item_3" class="drop_item"> Films </div>
+                <div id="dropdown_item_4" class="drop_item"> Music </div>
+                <div id="dropdown_item_5" class="drop_item"> Radio </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="title_section">
+        <img class="scene_background" src="../images/background.jpeg">
+        <!-- <img id="tank" src="../images/tank.png">
+        <img id="duck" src="../images/duck.png"> -->
+
+        <div id="text-container">
+            <h1> British Songs: Gracie Fields! </h1>
+        </div>
+
+        <div id="music_intro_image_container">
+            <img id="music_intro_image" src="../images/graciefields.jpg">
+        </div>
+        <div id="subtitle-container">
+            <h2> The following slides were made by Alice Aung </h2>
+        </div>
+    </div>
+
+
+
+    <div class="video_section smaller_video_section">
+        <img class="scene_background video_background top" src="../images/background.jpeg">
+        <div class="video vertical_video">
+            <img src="../images/grazer.jpg" class="slideshow_img">
+        </div>
+        <div class="info_box video_box vertical_box">
+            <div class="section_subtitle"> Gracie Fields </div>
+            <div class="description">
+                <ul>
+                    <li>Born in 1898, her career started in traveling British troops while earning extra money from
+                        factory work.
+                    </li>
+                    <li>Became an actress but once World War 2 erupted, she entertained british troops stationed in
+                        France while falling ill.
+                    </li>
+                    <li>Her husband was Italian and during that time they were deemed aliens so she received backlash
+                        and moved to North America for concerts. Received even more backlash but eventually was forgiven
+                        when she was raising money for Europe’s war efforts from it.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="video_section smaller_video_section">
+        <img class="scene_background video_background bottom" id="second_background" src="../images/background.jpeg">
+        <div class="video vertical_video second_video">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/x4U1SY6fITg?rel=0">
+            </iframe>
+        </div>
+        <div class="info_box video_box vertical_box second_box">
+            <div class="section_subtitle"> Wish Me Luck As You Wave Me Goodbye </div>
+            <div class="description">
+                <ul>
+                    <li>
+                        The upbeat music and peppy delivery sparked optimism instead of sorrow when being departed for
+                        the war.
+                    </li>
+                    <li>Helped keep soldiers calm and motivated them to carry on.
+
+                    </li>
+                    <li>“Wish me luck as you wave me goodbye / Not a tear, but a cheer, / make it gay / Give me a smile
+                        I can keep all the while / In my heart while I’m away” </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="footer">
+        <div id="container_link">
+            <a href="../music.html" id="go_back"> Go Back! </a>
+        </div>
+    </div>
+
+
+</body>
+
 </html>

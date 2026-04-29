@@ -7,22 +7,6 @@
     background-color: #91837e;
 }
 
-.title_container {
-    position: absolute;
-    top: 10%;
-
-    width: 80%;
-    height: 10%;
-
-    font-family: "Rubik Bubbles", cursive;
-    /* font-size: 5.3vw; */
-    font-size: min(9vw, 40px);
-    text-align: center;
-    color: #595959;
-
-    z-index: 4;
-}
-
 .info_box {
     position: relative;
     height: 80%;
@@ -41,7 +25,7 @@
     padding: none;
     margin: none;
 
-    z-index: 2;
+    z-index: 1;
     /* makes everything go above background */
 }
 
@@ -74,11 +58,10 @@
 }
 
 #area_background {
-    height: min(115vw, 115vh);
     width: 95%;
     left: 2.5%;
 
-    top: min(3vw, 3vh);
+   top: 5%;
 
     z-index: 1;
 }
