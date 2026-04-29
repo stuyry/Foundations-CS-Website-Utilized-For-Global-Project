@@ -278,7 +278,7 @@ addEventListener("scroll", () => {
     const navbarWidth = document.getElementById("navbar").getBoundingClientRect().width;
     
     const startPos = navbarWidth * 0.1;       
-    const endPos = navbarWidth * 0.9;          
+    const endPos = navbarWidth * 0.85;          
     const distance = endPos - startPos;
 
     const totalHeight = document.getElementById("title_section").getBoundingClientRect().height + 

@@ -1,6 +1,8 @@
 .image_tooltip_section {
-    width: min(35%, 200px);
-    height: 23%;
+    width: 150px;
+    height: 230px;
+
+
     object-fit: contain;
 
     top: 28%;
@@ -48,7 +50,7 @@
 .poster_image {
     width: 90%;
     height: 90%;
-    
+
 
     position: absolute;
     left: 5%;
@@ -56,8 +58,9 @@
 
 
 .right_image_tooltip_section {
-    width: min(35%, 200px);
-    height: 23%;
+    width: 150px;
+    height: 230px;
+
     object-fit: contain;
 
     position: absolute;
