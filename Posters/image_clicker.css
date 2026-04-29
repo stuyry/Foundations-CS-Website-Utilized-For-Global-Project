@@ -1,6 +1,6 @@
 .image_tooltip_section {
-    width: 150px;
-    height: 230px;
+    width: max(20vw, 160px);
+    height: max(30vw, 200px);
 
 
     object-fit: contain;
@@ -58,8 +58,8 @@
 
 
 .right_image_tooltip_section {
-    width: 150px;
-    height: 230px;
+    width: max(20vw, 160px);
+    height: max(30vw, 200px);
 
     object-fit: contain;
 
