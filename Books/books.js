@@ -9,7 +9,7 @@ function dropdowner() {
     if (!dropdown_active_signal) {
         dropdown_active_signal = true;
         document.getElementById("dropdown_container").style.animation = "dropdown_animation_in 0.5s ease-in-out";
-        document.getElementById("dropdown_container").style.display = "inline";
+        document.getElementById("dropdown_container").style.display = "flex";
 
     }
     else {
@@ -65,7 +65,7 @@ function multiImageContainerCheck(index) {
     let itemWidth = document.getElementsByClassName("flex_image_appear")[index].getBoundingClientRect().width;
     let offsetToApply = (backgroundWidth - itemWidth) / 2.5;
 
-    
+
     document.getElementsByClassName("flex_image_appear")[index].style.left = offsetToApply + "px";
 }
 
@@ -127,7 +127,7 @@ function borderFlashing(className, index, count) {
 }
 
 function seeMultiImages(index, multImageContainerIndex) {
-    transformed = true; 
+    transformed = true;
 
     document.getElementsByClassName("flex_container_for_image_clicker")[index].style.animation = "button_swap 1s ease-in-out";
     document.getElementsByClassName("book_wrapper")[index].style.animation = "multi_image_description_mover 1s ease-in-out";
@@ -155,7 +155,7 @@ function seeMultiImages(index, multImageContainerIndex) {
 }
 
 function seeSingleImages(genericIndex, singleIndex) {
-    transformed = true; 
+    transformed = true;
 
     document.getElementsByClassName("flex_container_for_image_clicker")[genericIndex].style.animation = "button_swap 1s ease-in-out";
     document.getElementsByClassName("single_book_wrapper")[singleIndex].style.animation = "single_image_description_mover 1s ease-in-out";
@@ -211,7 +211,7 @@ function hideMultiImages(index, multImageContainerIndex) {
 }
 
 function hideSingleImages(genericIndex, singleIndex) {
-    transformed = true; 
+    transformed = true;
 
     document.getElementsByClassName("flex_container_for_image_clicker")[genericIndex].style.animation = "button_swap_back 1s ease-in-out";
     document.getElementsByClassName("single_book_wrapper")[singleIndex].style.animation = "single_image_description_mover_back 1s ease-in-out";
@@ -240,18 +240,18 @@ function hideSingleImages(genericIndex, singleIndex) {
 
 addEventListener("scroll", () => {
     const navbarWidth = document.getElementById("navbar").getBoundingClientRect().width;
-    
-    const startPos = navbarWidth * 0.1;       
-    const endPos = navbarWidth * 0.9;          
+
+    const startPos = navbarWidth * 0.1;
+    const endPos = navbarWidth * 0.8;
     const distance = endPos - startPos;
 
-    const totalHeight = document.getElementById("title_section").getBoundingClientRect().height + 
-    document.getElementById("overview").getBoundingClientRect().height + 
-    document.getElementsByClassName("title")[0].getBoundingClientRect().height +
-    document.getElementsByClassName("title")[1].getBoundingClientRect().height +
-    document.getElementsByClassName("section")[0].getBoundingClientRect().height +
-    document.getElementsByClassName("section")[1].getBoundingClientRect().height +
-    document.getElementById("footer").getBoundingClientRect().height;
+    const totalHeight = document.getElementById("title_section").getBoundingClientRect().height +
+        document.getElementById("overview").getBoundingClientRect().height +
+        document.getElementsByClassName("title")[0].getBoundingClientRect().height +
+        document.getElementsByClassName("title")[1].getBoundingClientRect().height +
+        document.getElementsByClassName("section")[0].getBoundingClientRect().height +
+        document.getElementsByClassName("section")[1].getBoundingClientRect().height +
+        document.getElementById("footer").getBoundingClientRect().height;
 
     const progress = Math.min(scrollY / totalHeight, 1);
     console.log(scrollY);
@@ -261,9 +261,24 @@ addEventListener("scroll", () => {
     document.getElementById("navbar_duck").style.left = `${application}px`;
 });
 
-document.getElementById("dropdown_item_1").addEventListener("click", () => {
-    window.location.href = "../Posters/Posters.html"
-});
+setInterval(() => { //nested in here because the display is none
+    document.getElementById("dropdown_item_1").addEventListener("click", () => {
+        window.location.href = "../Posters/Posters.html";
+    });
+    document.getElementById("dropdown_item_2").addEventListener("click", () => {
+        window.location.href = "../Books/books.html";
+    });
+    document.getElementById("dropdown_item_3").addEventListener("click", () => {
+        window.location.href = "../Films/films.html";
+    });
+    document.getElementById("dropdown_item_4").addEventListener("click", () => {
+        window.location.href = "../Music/music.html";
+    });
+    document.getElementById("dropdown_item_5").addEventListener("click", () => {
+        window.location.href = "../Radio_Shows/radio.html";
+    });
+}, 100);
+
 // dropdown_item_2
 // dropdown_item_3
 // dropdown_item_4

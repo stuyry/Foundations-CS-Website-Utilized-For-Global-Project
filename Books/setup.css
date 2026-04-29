@@ -40,8 +40,9 @@ html {
 }
 
 .background_books {
+    transform: translateY(-5vw);
     width: 90vw;
-    height: min(185vh, 166vw);
+    height: min(288vh, 288vw);
 
     object-fit: cover;
 

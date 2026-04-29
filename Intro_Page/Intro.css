@@ -184,7 +184,7 @@ html {
     align-items: center;
     justify-content: center;
 
-    font-size: min(6vw, 90px);
+    font-size: min(6vw, 30px);
     text-align: center;
     font-family: "Rubik Bubbles", cursive;
     color: #595959;
@@ -204,7 +204,7 @@ html {
     align-items: center;
     justify-content: center;
 
-    font-size: max(2vw, 23px);
+    font-size: min(2vw, 23px);
     font-family: 'Sue Ellen Francisco', cursive;
     color: #595959;
 }

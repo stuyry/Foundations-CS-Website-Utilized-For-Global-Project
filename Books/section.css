@@ -1,6 +1,6 @@
 .section {
     width: 100vw;
-    height: min(200vh, 180vw);
+    height: min(300vh, 300vw);
 
     display: flex;
     align-items: center;
@@ -122,7 +122,7 @@
     background-color: #91837e;
     border-radius: 20px;
     
-    width: min(60%, 500px);
+    width: min(60%, 400px);
     height: 30%;
 
     position: absolute;
@@ -162,7 +162,7 @@
 }
 
 .single_image {
-    width: min(30%, 230px);
+    width: min(30%, 200px);
     height: 50%;
 
     border: #91837e solid 10px;

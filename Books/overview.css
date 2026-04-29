@@ -2,22 +2,26 @@
     width: 100vw;
     height: 30vw;
 
+    max-height: 60vh;
+
     /* WHAT I LEARNED: USE REM. using vh really messes things up so using px or rem -> as I wanted it to be. IS WAY BETTER */
 
     background-color: blue;
 
     background-image: url("images/background.jpeg");
+    background-size: cover;
     background-repeat: none;
 
+    display: flex;
+    justify-content: center;
 }
 
 #overview_flex {
-    width: 90vw;
+    width: min(80vw, 1000px);
     height: 80%;
 
     position: absolute;
-    top: 10%;
-    left: 5%;
+    top: 9%;
 
     display: flex;
     align-items: center;
@@ -32,7 +36,7 @@
 
     position: relative;
 
-    border: #ba8876 solid 10px;
+    border: #ba8876 solid 2px;
 }
 
 .overview_book_caption {
@@ -61,7 +65,7 @@
 }
 
 #long_caption {
-    font-size: 1.44vw;
+    font-size: min(1.34vw, 17px);
 }
 
 .overview_book_image {
