@@ -4,7 +4,7 @@ function dropdowner() {
     if (!dropdown_active_signal) {
         dropdown_active_signal = true;
         document.getElementById("dropdown_container").style.animation = "dropdown_animation_in 0.5s ease-in-out";
-        document.getElementById("dropdown_container").style.display = "inline";
+        document.getElementById("dropdown_container").style.display = "flex";
 
     }
     else {
@@ -43,7 +43,7 @@ addEventListener("scroll", () => {
     const navbarWidth = document.getElementById("navbar").getBoundingClientRect().width;
     
     const startPos = navbarWidth * 0.1;       
-    const endPos = navbarWidth * 0.9;          
+    const endPos = navbarWidth * 0.8;          
     const distance = endPos - startPos;
 
     const totalHeight = document.getElementById("title_section").getBoundingClientRect().height + 
@@ -55,9 +55,36 @@ addEventListener("scroll", () => {
     document.getElementById("footer").getBoundingClientRect().height;
 
     const progress = Math.min(scrollY / totalHeight, 1);
-    console.log(scrollY);
-    console.log(totalHeight);
+    // console.log(scrollY);
+    // console.log(totalHeight);
 
     const application = startPos + (progress * distance);
     document.getElementById("navbar_duck").style.left = `${application}px`;
 });
+
+setInterval(() => { //nested in here because the display is none
+    document.getElementById("dropdown_item_1").addEventListener("click", () => {
+        window.location.href = "../Posters/Posters.html";
+    });
+    document.getElementById("dropdown_item_2").addEventListener("click", () => {
+        window.location.href = "../Books/books.html";
+    });
+    document.getElementById("dropdown_item_3").addEventListener("click", () => {
+        window.location.href = "../Films/films.html";
+    });
+    document.getElementById("dropdown_item_4").addEventListener("click", () => {
+        window.location.href = "../Music/music.html";
+    });
+    document.getElementById("dropdown_item_5").addEventListener("click", () => {
+        window.location.href = "../Radio_Shows/radio.html";
+    });
+}, 100);
+
+
+// setInterval(() => {
+//   let normSectionHeight = document.getElementsByClassName("section")[0].getBoundingClientRect().height;
+//   for(let i = 0; i < document.getElementsByClassName("pos_middle").length; i++) {
+//     document.getElementsByClassName("pos_middle")[i].style.bottom = `${normSectionHeight * 0.032}px`;
+//   }
+//   console.log(normSectionHeight);
+// }, 100)

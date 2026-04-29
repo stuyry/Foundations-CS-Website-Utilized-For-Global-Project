@@ -1,14 +1,16 @@
 .section {
     width: 100vw;
     height: min(194.4vw, 200dvh); 
+
+    min-height: 194.4vw;
     background-color: #91837e;
 
     position: relative;
 }
 
 #bigger_section {
-    
-    height: min(190vw, 250dvh); 
+    height: min(190vw, 230dvh); 
+    min-height: 200vw;
 }
 
 .section_background {
@@ -17,7 +19,7 @@
 
     object-fit: cover;
 
-    position: absolute;
+    position: relative;
     
     left: 3.5%;
     top: 5%;
@@ -32,11 +34,11 @@ iframe {
     border: none;
 }
 .video {
-    border: 12px #595959 solid;
-    width: min(55%, 450px);
-    height: 20%;
+    border: min(3vw, 10px) #595959 solid;
+    width: min(55%, 250px);
+    height: min(20%, 155px);
 
-    position: relative;
+    position: absolute;
 
     top: 9%;
     left: 22.5%;
@@ -46,18 +48,19 @@ iframe {
 
 #video_2 {
     /* has a different height so percent isnt accurate */
-    height: 17%;
+    height: min(17%, 155px);
 }
 
 .analysis {
     /* width: min(80%, 2250px); */
     width: 80%;
-    height: 55%;
+    height: 60%;
 
-    position: relative;
+    position: absolute;
 
-    top: 12%;
+    top: 32%;
     left: 10%;
+
 }
 
 .circle_description {
@@ -66,18 +69,18 @@ iframe {
     /* width: min(33.3%, 800px); */
     /* height: min(20vw, 600px); */
 
-    height: min(23vw, 300px);
-    width: min(33.3%, 350px);
+    height: min(22.7%, 260px);
+    width: min(36.3%, 310px);
     
     display: flex;
     align-items: center;
     justify-content: center;
 
-    position: absolute;
+    position: relative;
 
     z-index: 1;
 
-    font-size: min(2vw, 26px);
+    font-size: min(2vw, 18px);
     text-align: center;
     font-family: 'Cinzel';
 
@@ -85,7 +88,7 @@ iframe {
 }
 
 .long_inner_text {
-    font-size: min(1.4vw, 18.5px);
+    font-size: min(1.4vw, 15px);
 
     position: relative;
     top: 1%;
@@ -120,20 +123,22 @@ iframe {
 
 .pos_middle {
     left: 34%;
-    top: 20%;
+    top: -2%;;
 }
 
 .pos_right {
-    left: 68%;
-    top: 40%;
+    left: 64%;
+    top: -6%;
 }
 
 .lower {
-    top: 60%;
+    top: -10%;
 }
 
 .lowest {
-    top: 80%;
+    top: -14%;
 }
 
-
+#even_lower_than_lowest {
+    top: -18%;
+}

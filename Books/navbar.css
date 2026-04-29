@@ -40,7 +40,7 @@
 
 #dropdown_container {
     position: absolute;
-    top: 13vh;
+    top: 20vh;
     z-index: 3;
 
     width: 80vw;
@@ -127,24 +127,24 @@
 
 @keyframes dropdown_animation_in {
     from {
-        top: 8vh;
+        top: 13vh;
         opacity: 0;
     }
 
     to {
-        top: 13vh;
+        top: 20vh;
         opacity: 1;
     }
 }
 
 @keyframes dropdown_animation_out {
     from {
-        top: 13vh;
+        top: 20vh;
         opacity: 1;
     }
 
     to {
-       top: 8vh;
+       top: 13vh;
         opacity: 0;
     }
 }

@@ -10,6 +10,7 @@
     display: flex;
     justify-content: center;
 
+
     top: 2%;
     left: 10vw;
     /* fix for the sticky issue with it making an empty area at the top */
@@ -40,7 +41,8 @@
 
 #dropdown_container {
     position: absolute;
-    top: 13vh;
+    top: 20vh;
+    left: 0;
     z-index: 3;
 
     width: 80vw;
@@ -49,8 +51,6 @@
 
     display: flex;
     justify-content: center;
-
-    display: none;
 }
 
 #navbar_duck {
@@ -127,24 +127,24 @@
 
 @keyframes dropdown_animation_in {
     from {
-        top: 8vh;
+        top: 13vh;
         opacity: 0;
     }
 
     to {
-        top: 13vh;
+        top: 20vh;
         opacity: 1;
     }
 }
 
 @keyframes dropdown_animation_out {
     from {
-        top: 13vh;
+        top: 20vh;
         opacity: 1;
     }
 
     to {
-       top: 8vh;
+       top: 13vh;
         opacity: 0;
     }
 }

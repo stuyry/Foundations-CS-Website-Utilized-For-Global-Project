@@ -14,7 +14,7 @@ function dropdowner() {
     if (!dropdown_active_signal) {
         dropdown_active_signal = true;
         document.getElementById("dropdown_container").style.animation = "dropdown_animation_in 0.5s ease-in-out";
-        document.getElementById("dropdown_container").style.display = "inline";
+        document.getElementById("dropdown_container").style.display = "flex";
 
     }
     else {
@@ -293,6 +293,24 @@ addEventListener("scroll", () => {
     const application = startPos + (progress * distance);
     document.getElementById("navbar_duck").style.left = `${application}px`;
 });
+
+setInterval(() => { //nested in here because the display is none
+    document.getElementById("dropdown_item_1").addEventListener("click", () => {
+        window.location.href = "../Posters/Posters.html";
+    });
+    document.getElementById("dropdown_item_2").addEventListener("click", () => {
+        window.location.href = "../Books/books.html";
+    });
+    document.getElementById("dropdown_item_3").addEventListener("click", () => {
+        window.location.href = "../Films/films.html";
+    });
+    document.getElementById("dropdown_item_4").addEventListener("click", () => {
+        window.location.href = "../Music/music.html";
+    });
+    document.getElementById("dropdown_item_5").addEventListener("click", () => {
+        window.location.href = "../Radio_Shows/radio.html";
+    });
+}, 100);
 
 // function transformRightClickerWidth(width) {
 //     return (innerWidth / 1.455) + width;
