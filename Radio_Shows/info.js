@@ -1,4 +1,6 @@
 let dropdown_active_signal = false;
+const referenceHeight = screen.availHeight;
+
 
 function dropdowner() {
     if (!dropdown_active_signal) {
@@ -17,12 +19,10 @@ function dropdowner() {
 }
 
 addEventListener("resize", () => {
-  
   video_centerer();
 });
 
 addEventListener("scroll", () => {
-  
   video_centerer();
 });
 
@@ -34,10 +34,9 @@ addEventListener("scroll", () => {
     const distance = endPos - startPos;
 
     const totalHeight = document.getElementById("title_section").getBoundingClientRect().height + 
-    document.getElementById("introduction").getBoundingClientRect().height + 
     document.getElementsByClassName("video_section")[0].getBoundingClientRect().height +
     document.getElementById("footer").getBoundingClientRect().height +
-    document.getElementById("smaller_video_section").getBoundingClientRect().height;
+    document.getElementsByClassName("video_section")[1].getBoundingClientRect().height;
 
     const progress = Math.min(scrollY / totalHeight, 1);
     console.log(scrollY);
@@ -78,4 +77,13 @@ setInterval(() => { //nested in here because the display is none
     document.getElementById("dropdown_item_5").addEventListener("click", () => {
         window.location.href = "../Radio_Shows/radio.html";
     });
+
+    setHeights();
 }, 100);
+
+function setHeights() {
+    let application = Math.min(innerWidth, referenceHeight);
+    for(let i = 0; i < document.getElementsByClassName("video_section").length; i++) {
+        document.getElementsByClassName("video_section")[i].style.height = `${application}px`;
+    }
+}
