@@ -59,3 +59,8 @@ iframe {
 #smaller_video_section {
     height: min(50vw, 50dvh);
 }
+
+.video_image {
+    width: 100%;
+    height: 100%;;
+}
