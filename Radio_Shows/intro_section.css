@@ -4,8 +4,6 @@
     background-color: #9C7468;
     width: 100vw;
 
-    height: min(97.2vw, 100dvh);
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,7 +56,6 @@
 }
 
 #music_intro_image_container {
-    width: min(50%, 350px);
     height: 35%;
 
     position: relative;

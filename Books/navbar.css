@@ -22,7 +22,7 @@
 
 #navbar {
     width: min(50vw, 326px);
-    height: 15vh;
+
 
     display: flex;
     position: relative;
